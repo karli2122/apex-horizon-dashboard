@@ -1,0 +1,802 @@
+{
+ "ics": [
+  {
+   "chairman": null,
+   "chairman_ask": "please give sign-off on the three trades, tell us whether the 25% theme cap should count *USD exposure* as one theme, and name the next sector to investigate. Our suggestion is Nordic energy/Equinor after Brent's −21% month.",
+   "decision": "Cash after fills: EUR 499.99. Equity marked at 08:15 CET is EUR 996.85 (−0.31%, from fees and spread). Gross exposure is 74.9%.; Total risk at stops: EUR 37.83 at entry (3.78%), within the CRO's 5% limit.; Exits: mechanical stops and targets, checked by mark.py. The equity stops are reviewed at each IC, and stops may be trailed up to 2.5×ATR but are never loosened.; Next IC: Mon 30 Nov (month-end rotation rebalance), or earlier if a stop or target is hit or BTC triggers.",
+   "decision_table": {
+    "head": [
+     "#",
+     "Action",
+     "Instrument",
+     "Qty",
+     "Fill",
+     "Size",
+     "Stop",
+     "Target",
+     "Risk at stop"
+    ],
+    "rows": [
+     [
+      "1",
+      "**BUY**",
+      "SXR8.DE (EUR)",
+      "0.3593",
+      "693.038",
+      "EUR 250.01 incl. fee (25.0%)",
+      "651.79",
+      "755.30",
+      "EUR 16.82"
+     ],
+     [
+      "2",
+      "**BUY**",
+      "Apple, APC.F (EUR)",
+      "0.7692",
+      "323.7182",
+      "EUR 250.00 incl. fee (25.0%)",
+      "304.46",
+      "368.48 (2.5R)",
+      "EUR 16.81"
+     ],
+     [
+      "3",
+      "**SELL (short)**",
+      "EURUSD CFD",
+      "EUR 250 notional, 1x",
+      "1.09690",
+      "EUR 250 notional (25.0%), margin EUR 8.33",
+      "1.11566",
+      "1.05938 (2R)",
+      "EUR 4.20"
+     ],
+     [
+      "4",
+      "**Conditional BUY** (not filled)",
+      "BTC-EUR",
+      "up to EUR 250",
+      "on a 4h close above 65,447 USDT",
+      "—",
+      "2.5× 4h ATR",
+      "—",
+      "≤ EUR 20"
+     ],
+     [
+      "—",
+      "**PASS / VETO**",
+      "SOL (CRO+Quant), MDT (Quant), EURUSD 2x (CIO cap)",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+     ]
+    ]
+   },
+   "file": "ic/2026-11-26.md",
+   "id": "2026-11-26",
+   "kind": "ic",
+   "markdown": "# Apex Horizon Capital — Investment Committee #1\n**Date:** Thu 26 Nov 2026, 08:10–08:15 CET (Oslo) · **Mode:** PAPER · **Capital:** EUR 1,000.00\n**Present:** CEO; CIO Elena Varga; Quant Dr. Kenji Mori; Macro Marcus Lindqvist; Execution Tomas Rask; CRO Sofia Brandt (speaks last)\n**Data:** fetched this morning with yfinance (daily 2y + 1-min last trades) and the Binance/Coinbase public APIs. Raw files: `data/snapshot_2026-11-26.json`, `data/live_quotes.json`. US cash markets are shut today (Thanksgiving) and close early tomorrow. The US stock and ETF prices are Wednesday 25 Nov closes. The EU prices are Xetra closes from 25 Nov 17:29 CET and Frankfurt from 21:34 CET. FX and crypto are live as of 08:13 CET. The 3/6/12-month momentum for the EU ETFs uses the 24 Nov daily bar, because the yfinance daily feed lags by one bar.\n\n---\n## 1. CEO briefing\nObjective: put the first EUR 1,000 to work with an aggressive mandate, without breaking the CRO's hard limits:\n- at most EUR 20 (2%) risk per trade\n- expected portfolio drawdown of 5% or less\n- every position has a stop\n- each theme at 25% or less, crypto at 40% or less, leverage at 2x or less\n\nThe question for the committee: in a market that just turned risk-off, where is the asymmetric long, and what do we refuse to touch?\n\n**Tape this morning:**\n| Gauge | Last | vs 50d / 200d | 1m | 3m |\n|---|---|---|---|---|\n| S&P 500 (25 Nov) | 7,182.78 | below / below (7,602 / 7,352) | −7.0% | −7.1% |\n| Nasdaq-100 | 26,046.90 | below / below | −12.2% | −12.1% |\n| VIX | 28.29 | 50d avg 19.0 | +61% | +96% |\n| US 10y | 4.848% | 50d 5.07% | | |\n| DXY | 103.79 | above / above | +1.6% | +4.1% |\n| EURUSD | 1.0970 | below / below (1.1197 / 1.1489) | −1.4% | −5.4% |\n| EURNOK | 10.757 | above 50d | +3.6% | −0.8% |\n| Gold (GC=F) | 3,598.4 | below / below | −11.2% | −20.6% |\n| Brent | 90.77 | below 50d | −21.3% | +1.6% |\n| BTC-USD | 60,417 | below / below (75,135 / 72,029) | −24.9% | −28.4% |\n\n---\n## 2. Department reports\n\n### CIO — Elena Varga (allocation)\n- **Ranked shortlist:**\n  1. US equity beta through a UCITS ETF (SXR8.DE, iShares Core S&P 500 Acc, EUR). It's the top asset on the rotation's 3/6/12m blend at +4.2%; EUNL (MSCI World) is +4.1%, EQQQ −1.8%, IS3N (EM) −4.6%, 4GLD (gold) −13.9%.\n  2. Single-stock relative-strength leader: Apple. It's at 355.58 USD, 0.2% below its 52-week high, above its 50d (342.84) and 200d (303.96), and up 29.3% over 12 months, while the S&P fell 7% this month. NVDA (−31% 1m), GOOGL (−32% from its high) and AVGO (−37%) are falling knives.\n  3. Crypto rebound. SOL is −38% over 3 months and 42% below its 52-week high, and BTC's daily RSI(14) is 19.4, a classic capitulation reading. Proposal: **SOL 25% (EUR 250)** for a fast mean-reversion trade.\n- **Target weights:** SXR8 25%, AAPL 25%, SOL 25%, cash 25%.\n- **What makes me wrong:** if this is the start of a bear market (S&P cash index already below its 200d), all three are long beta.\n- **Challenge to Macro:** Marcus will want a 2x USD trade. The 25% theme cap applies to notional, not to risk.\n\n### Quant — Dr. Kenji Mori (signals, out-of-sample)\n- **Rotation (dual momentum, 3/6/12m):** out of sample from 2017 to 2026, the stock bot's rotation sleeve made 10.6% a year with a 19% max drawdown. That's our only stock signal validated out of sample. Today only SXR8 and EUNL have a positive blend, and they're the same exposure, so it's one slot: **SXR8 is validated.** The caveat is that the formal rebalance date is month-end (30 Nov), so this is a few days early.\n- **Swing (RSI(2) under 10, above 200d):** today's scan of the 30-name universe fires on **MDT only** (RSI2 7.5, 96.06 against a 200d of 87.15). The swing sleeve had **no out-of-sample edge** from 2017 to 2026, so I veto MDT.\n- **Crypto:** the bot's validated strategy is the 4h trend breakout (Donchian 55, ADX of at least 18). Live 4h at 08:00 CET:\n  - BTC 60,468 against a 55-bar high of 65,447 (low 55,130), ADX 20.5, RSI(4h) 50.9\n  - ETH 1,686.94 against 1,845.07, ADX 16.0\n  - SOL 70.85 against 78.48, ADX 16.0\n  - **No breakout signal.** Mean reversion lost money **in and out of sample** in our backtests, and a daily RSI of 19 is exactly what it bought on its way down. **I veto Elena's SOL trade as unvalidated.** The out-of-sample result of the crypto trend strategy was weak (+9.5% a year, about +1% in the strict test), so it gets a conditional order at most.\n- **AAPL:** single-stock momentum isn't one of our backtested sleeves. I don't veto it, because the momentum factor has decades of public evidence, but I flag it: insufficient firm-specific evidence, so size it on risk and use a mechanical stop.\n- **Challenge to the CIO:** in EUR, SXR8 sits just above its 200d (692.00 against 690.40), only because the USD rallied. In USD the S&P is **below** its 200d. Our \"positive momentum\" is partly a currency trade.\n\n### Macro — Marcus Lindqvist (regime)\n- **Regime:** risk-off with a strong dollar:\n  - VIX is 28.3 against a 50-day average of 19.0\n  - the Nasdaq is −12% this month\n  - DXY is +4.1% over 3 months and EURUSD is −5.4%\n  - gold is −20.6% over 3 months, so it isn't hedging; that looks like forced deleveraging\n  - Brent is −21% this month, which weighs on NOK (EURNOK +3.6% in 1m)\n- **Catalysts in the next 90 days:** the December FOMC, ECB and Norges Bank meetings; US data (payrolls and CPI) while the 10y is 4.85% after peaking around 5.36%; and year-end and month-end rebalancing (30 Nov) during holiday liquidity.\n- **Scenarios for the next 3 months, risk assets:**\n  - **Bull, 30%:** VIX falls back under 20, the S&P recovers its 200d, and the leaders (AAPL) break out. SXR8 +6–8%.\n  - **Base, 45%:** choppy range trading, and the USD stays firm. Little net change in equities, while EURUSD drifts toward 1.07–1.08.\n  - **Bear, 25%:** credit or earnings stress. The S&P falls through its 200d to about −15% from the high, crypto tests the 55k lows, and both equity stops are hit.\n- **What everyone is ignoring:** if the Fed turns dovish because markets crash, the USD can reverse sharply. That hurts our EUR-denominated returns on US assets *and* a USD long at the same time.\n- **Proposal:** short EURUSD at **2x, EUR 500 notional**. It's the cleanest trend on the board: below the 50d and 200d, with a 3-month slope of −5.4%.\n- **Challenge to the CIO:** buying SOL at RSI 19 in a dollar-up, liquidity-draining tape is catching a falling knife. I side with Kenji.\n\n### Execution — Tomas Rask (venue, costs, compliance, tax)\n- **PRIIPs:** US-listed ETFs aren't available to EU/EEA retail, so the S&P exposure goes through **SXR8 (UCITS, Acc, EUR, Xetra)**. That's fine.\n- **AAPL:** US cash markets are closed today, but the EUR line trades on Tradegate/Frankfurt from 08:00 to 22:00 CET. The reference price is **APC.F 322.75 EUR** (last trade 25 Nov 21:34 CET; US close 355.58 USD ÷ 1.0970 = 324.15 EUR). Holiday spreads are wider, so I model **30 bp slippage** plus a EUR 1 fee. Fractional shares are fine (Trade Republic-type broker).\n- **SXR8:** reference **692.00 EUR** (Xetra close 25 Nov 17:29). I model 15 bp slippage, because the spread before 09:00 is wider, plus a EUR 1 fee.\n- **EURUSD:** a CFD under the ESMA retail rules (30:1 max). Mid 1.09697, modelled spread 1.5 pips, no commission. Overnight financing on a short-EUR position is currently a small credit/debit depending on the broker; I'll track it.\n- **Fees on small tickets:** EUR 1 on EUR 250 is 0.4% each way, so round-trip costs are 0.8–1.4% per stock trade. **Don't churn.**\n- **Norwegian tax notes:**\n  - Gains are taxed as ordinary income at 22%, then grossed up by 1.72, so about 37.84% effective.\n  - Losses are deductible.\n  - SXR8 holds more than 80% non-EEA stocks, so it **doesn't qualify for an aksjesparekonto (ASK)**; nor does AAPL held at a foreign broker. Both are taxed at realisation.\n  - FX/CFD gains are ordinary capital income at 22%.\n  - Report in NOK at the transaction-date rate. EURNOK today is 10.757.\n- **Crypto venues:** Kraken or Bitvavo at about 0.25%, if a breakout triggers.\n\n### CRO — Sofia Brandt (speaks last; hard veto)\n- **SOL 25% (EUR 250), CIO idea — VETO.** The only defensible stop is below the 55-bar 4h low of 64.87, which is 8.4% below 70.85. On EUR 250 that's **about EUR 21 plus fees, above the EUR 20 per-trade cap.** It also has no validated signal (Kenji). Rejected.\n- **EURUSD 2x, EUR 500 notional, Macro idea — CUT.** It's within my risk caps: a stop 2.5×ATR away (1.66%) is about EUR 8.4. But Elena's 25% theme cap makes it EUR 250 at 1x. **I also flag our USD stacking:** SXR8 and AAPL are both USD assets, so with the short we're about 75% long USD in EUR terms. Marcus's own \"ignored scenario\", a dovish Fed and a weaker USD, would hit all three legs at once.\n- **SXR8 25%:** approved with a stop at 651.79, which is 2.5×ATR(14) = 2.5 × 16.08 below. Risk is EUR 16.82 including both fees, so 1.68% of equity.\n- **AAPL 25%:** approved with a stop at 304.46 EUR (2.5×ATR = 2.5 × 8.03 USD, converted at 1.0970). Risk is EUR 16.81, so 1.68%. Gap risk: AAPL can gap through the stop at the US open, so a 3% gap would add about EUR 7.\n- **Portfolio:** the total risk if every stop is hit is **EUR 37.83 (3.78%)**, inside the 5% limit. Over the last year, the historical 99% one-day loss on these three positions is EUR 14.87, and the worst 5-day window was **−EUR 28.25 (−2.8%)**. The daily correlation of SXR8 and APC.F is 0.34, which is understated because the trading hours don't line up; I treat the two as one equity bet.\n- **Kill switch:** at −15% (EUR 850 equity) everything is flattened. That's far away.\n\n---\n## 3. Synthesis and debate\n- **Agreed:** don't buy crypto now. There's no validated signal, and the SOL trade broke the per-trade cap. Rotation points to US equity in EUR, and AAPL is the cleanest relative-strength leader.\n- **Conflict:**\n  - Kenji's point that \"SXR8 momentum is partly USD\" against Marcus's \"USD trend\". Together they show that **the whole book leans on a strong USD**.\n  - Elena wanted 75% invested, including crypto. Sofia's ruling leaves about 50% cash.\n- **Blind spots:**\n  - The SXR8 entry comes 4 days before the formal month-end rebalance.\n  - Holiday liquidity means AAPL's EUR price isn't confirmed until the US reopens on Friday.\n  - The equity legs are likely correlated in a sell-off.\n- **Resolution:** keep the USD short at a small size (EUR 4.20 risk) as the explicit trend expression. If a dovish-Fed scenario appears (EURUSD back above its 50d at 1.1197), the CEO will review all three legs together.\n\n---\n## 4. CEO final decision\n| # | Action | Instrument | Qty | Fill | Size | Stop | Target | Risk at stop |\n|---|---|---|---|---|---|---|---|---|\n| 1 | **BUY** | SXR8.DE (EUR) | 0.3593 | 693.038 | EUR 250.01 incl. fee (25.0%) | 651.79 | 755.30 | EUR 16.82 |\n| 2 | **BUY** | Apple, APC.F (EUR) | 0.7692 | 323.7182 | EUR 250.00 incl. fee (25.0%) | 304.46 | 368.48 (2.5R) | EUR 16.81 |\n| 3 | **SELL (short)** | EURUSD CFD | EUR 250 notional, 1x | 1.09690 | EUR 250 notional (25.0%), margin EUR 8.33 | 1.11566 | 1.05938 (2R) | EUR 4.20 |\n| 4 | **Conditional BUY** (not filled) | BTC-EUR | up to EUR 250 | on a 4h close above 65,447 USDT | — | 2.5× 4h ATR | — | ≤ EUR 20 |\n| — | **PASS / VETO** | SOL (CRO+Quant), MDT (Quant), EURUSD 2x (CIO cap) | | | | | | |\n\n- **Cash after fills:** EUR 499.99. Equity marked at 08:15 CET is EUR 996.85 (−0.31%, from fees and spread). Gross exposure is 74.9%.\n- **Total risk at stops:** EUR 37.83 at entry (3.78%), within the CRO's 5% limit.\n- **Exits:** mechanical stops and targets, checked by `mark.py`. The equity stops are reviewed at each IC, and stops may be trailed up to 2.5×ATR but are never loosened.\n- **Next IC:** Mon 30 Nov (month-end rotation rebalance), or earlier if a stop or target is hit or BTC triggers.\n\n**Chairman:** please give sign-off on the three trades, tell us whether the 25% theme cap should count *USD exposure* as one theme, and name the next sector to investigate. Our suggestion is Nordic energy/Equinor after Brent's −21% month.\n",
+   "seq": 1,
+   "time": "2026-11-26T08:10:00+01:00",
+   "title": "Apex Horizon Capital — Investment Committee #1",
+   "views": {
+    "elena": {
+     "bullets": [
+      "Ranked shortlist:",
+      "Target weights: SXR8 25%, AAPL 25%, SOL 25%, cash 25%.",
+      "What makes me wrong: if this is the start of a bear market (S&P cash index already below its 200d), all three are long beta.",
+      "Challenge to Macro: Marcus will want a 2x USD trade. The 25% theme cap applies to notional, not to risk."
+     ],
+     "text": "- Ranked shortlist:\n  1. US equity beta through a UCITS ETF (SXR8.DE, iShares Core S&P 500 Acc, EUR). It's the top asset on the rotation's 3/6/12m blend at +4.2%; EUNL (MSCI World) is +4.1%, EQQQ −1.8%, IS3N (EM) −4.6%, 4GLD (gold) −13.9%.\n  2. Single-stock relative-strength leader: Apple. It's at 355.58 USD, 0.2% below its 52-week high, above its 50d (342.84) and 200d (303.96), and up 29.3% over 12 months, while the S&P fell 7% this month. NVDA (−31% 1m), GOOGL (−32% from its high) and AVGO (−37%) are falling knives.\n  3. Crypto rebound. SOL is −38% over 3 months and 42% below its 52-week high, and BTC's daily RSI(14) is 19.4, a classic capitulation reading. Proposal: SOL 25% (EUR 250) for a fast mean-reversion trade.\n- Target weights: SXR8 25%, AAPL 25%, SOL 25%, cash 25%.\n- What makes me wrong: if this is the start of a bear market (S&P cash index already below its 200d), all three are long beta.\n- Challenge to Macro: Marcus will want a 2x USD trade. The 25% theme cap applies to notional, not to risk."
+    },
+    "kenji": {
+     "bullets": [
+      "Rotation (dual momentum, 3/6/12m): out of sample from 2017 to 2026, the stock bot's rotation sleeve made 10.6% a year with a 19% max drawdown. That's our only stock signal validated out of sample. Today only SXR8 and EUNL have a positive blend, and they're the same exposure, so it's one slot: SXR8 is validated. The caveat is that the formal rebalance date is month-end (30 Nov), so this is a few days early.",
+      "Swing (RSI(2) under 10, above 200d): today's scan of the 30-name universe fires on MDT only (RSI2 7.5, 96.06 against a 200d of 87.15). The swing sleeve had no out-of-sample edge from 2017 to 2026, so I veto MDT.",
+      "Crypto: the bot's validated strategy is the 4h trend breakout (Donchian 55, ADX of at least 18). Live 4h at 08:00 CET:",
+      "AAPL: single-stock momentum isn't one of our backtested sleeves. I don't veto it, because the momentum factor has decades of public evidence, but I flag it: insufficient firm-specific evidence, so size it on risk and use a mechanical stop.",
+      "Challenge to the CIO: in EUR, SXR8 sits just above its 200d (692.00 against 690.40), only because the USD rallied. In USD the S&P is below its 200d. Our \"positive momentum\" is partly a currency trade."
+     ],
+     "text": "- Rotation (dual momentum, 3/6/12m): out of sample from 2017 to 2026, the stock bot's rotation sleeve made 10.6% a year with a 19% max drawdown. That's our only stock signal validated out of sample. Today only SXR8 and EUNL have a positive blend, and they're the same exposure, so it's one slot: SXR8 is validated. The caveat is that the formal rebalance date is month-end (30 Nov), so this is a few days early.\n- Swing (RSI(2) under 10, above 200d): today's scan of the 30-name universe fires on MDT only (RSI2 7.5, 96.06 against a 200d of 87.15). The swing sleeve had no out-of-sample edge from 2017 to 2026, so I veto MDT.\n- Crypto: the bot's validated strategy is the 4h trend breakout (Donchian 55, ADX of at least 18). Live 4h at 08:00 CET:\n  - BTC 60,468 against a 55-bar high of 65,447 (low 55,130), ADX 20.5, RSI(4h) 50.9\n  - ETH 1,686.94 against 1,845.07, ADX 16.0\n  - SOL 70.85 against 78.48, ADX 16.0\n  - No breakout signal. Mean reversion lost money in and out of sample in our backtests, and a daily RSI of 19 is exactly what it bought on its way down. I veto Elena's SOL trade as unvalidated. The out-of-sample result of the crypto trend strategy was weak (+9.5% a year, about +1% in the strict test), so it gets a conditional order at most.\n- AAPL: single-stock momentum isn't one of our backtested sleeves. I don't veto it, because the momentum factor has decades of public evidence, but I flag it: insufficient firm-specific evidence, so size it on risk and use a mechanical stop.\n- Challenge to the CIO: in EUR, SXR8 sits just above its 200d (692.00 against 690.40), only because the USD rallied. In USD the S&P is below its 200d. Our \"positive momentum\" is partly a currency trade."
+    },
+    "marcus": {
+     "bullets": [
+      "Regime: risk-off with a strong dollar:",
+      "Catalysts in the next 90 days: the December FOMC, ECB and Norges Bank meetings; US data (payrolls and CPI) while the 10y is 4.85% after peaking around 5.36%; and year-end and month-end rebalancing (30 Nov) during holiday liquidity.",
+      "Scenarios for the next 3 months, risk assets:",
+      "What everyone is ignoring: if the Fed turns dovish because markets crash, the USD can reverse sharply. That hurts our EUR-denominated returns on US assets *and* a USD long at the same time.",
+      "Proposal: short EURUSD at 2x, EUR 500 notional. It's the cleanest trend on the board: below the 50d and 200d, with a 3-month slope of −5.4%.",
+      "Challenge to the CIO: buying SOL at RSI 19 in a dollar-up, liquidity-draining tape is catching a falling knife. I side with Kenji."
+     ],
+     "text": "- Regime: risk-off with a strong dollar:\n  - VIX is 28.3 against a 50-day average of 19.0\n  - the Nasdaq is −12% this month\n  - DXY is +4.1% over 3 months and EURUSD is −5.4%\n  - gold is −20.6% over 3 months, so it isn't hedging; that looks like forced deleveraging\n  - Brent is −21% this month, which weighs on NOK (EURNOK +3.6% in 1m)\n- Catalysts in the next 90 days: the December FOMC, ECB and Norges Bank meetings; US data (payrolls and CPI) while the 10y is 4.85% after peaking around 5.36%; and year-end and month-end rebalancing (30 Nov) during holiday liquidity.\n- Scenarios for the next 3 months, risk assets:\n  - Bull, 30%: VIX falls back under 20, the S&P recovers its 200d, and the leaders (AAPL) break out. SXR8 +6–8%.\n  - Base, 45%: choppy range trading, and the USD stays firm. Little net change in equities, while EURUSD drifts toward 1.07–1.08.\n  - Bear, 25%: credit or earnings stress. The S&P falls through its 200d to about −15% from the high, crypto tests the 55k lows, and both equity stops are hit.\n- What everyone is ignoring: if the Fed turns dovish because markets crash, the USD can reverse sharply. That hurts our EUR-denominated returns on US assets *and* a USD long at the same time.\n- Proposal: short EURUSD at 2x, EUR 500 notional. It's the cleanest trend on the board: below the 50d and 200d, with a 3-month slope of −5.4%.\n- Challenge to the CIO: buying SOL at RSI 19 in a dollar-up, liquidity-draining tape is catching a falling knife. I side with Kenji."
+    },
+    "sofia": {
+     "bullets": [
+      "SOL 25% (EUR 250), CIO idea — VETO. The only defensible stop is below the 55-bar 4h low of 64.87, which is 8.4% below 70.85. On EUR 250 that's about EUR 21 plus fees, above the EUR 20 per-trade cap. It also has no validated signal (Kenji). Rejected.",
+      "EURUSD 2x, EUR 500 notional, Macro idea — CUT. It's within my risk caps: a stop 2.5×ATR away (1.66%) is about EUR 8.4. But Elena's 25% theme cap makes it EUR 250 at 1x. I also flag our USD stacking: SXR8 and AAPL are both USD assets, so with the short we're about 75% long USD in EUR terms. Marcus's own \"ignored scenario\", a dovish Fed and a weaker USD, would hit all three legs at once.",
+      "SXR8 25%: approved with a stop at 651.79, which is 2.5×ATR(14) = 2.5 × 16.08 below. Risk is EUR 16.82 including both fees, so 1.68% of equity.",
+      "AAPL 25%: approved with a stop at 304.46 EUR (2.5×ATR = 2.5 × 8.03 USD, converted at 1.0970). Risk is EUR 16.81, so 1.68%. Gap risk: AAPL can gap through the stop at the US open, so a 3% gap would add about EUR 7.",
+      "Portfolio: the total risk if every stop is hit is EUR 37.83 (3.78%), inside the 5% limit. Over the last year, the historical 99% one-day loss on these three positions is EUR 14.87, and the worst 5-day window was −EUR 28.25 (−2.8%). The daily correlation of SXR8 and APC.F is 0.34, which is understated because the trading hours don't line up; I treat the two as one equity bet.",
+      "Kill switch: at −15% (EUR 850 equity) everything is flattened. That's far away.",
+      "Agreed: don't buy crypto now. There's no validated signal, and the SOL trade broke the per-trade cap. Rotation points to US equity in EUR, and AAPL is the cleanest relative-strength leader.",
+      "Conflict:",
+      "Blind spots:",
+      "Resolution: keep the USD short at a small size (EUR 4.20 risk) as the explicit trend expression. If a dovish-Fed scenario appears (EURUSD back above its 50d at 1.1197), the CEO will review all three legs together.",
+      "Cash after fills: EUR 499.99. Equity marked at 08:15 CET is EUR 996.85 (−0.31%, from fees and spread). Gross exposure is 74.9%.",
+      "Total risk at stops: EUR 37.83 at entry (3.78%), within the CRO's 5% limit.",
+      "Exits: mechanical stops and targets, checked by mark.py. The equity stops are reviewed at each IC, and stops may be trailed up to 2.5×ATR but are never loosened.",
+      "Next IC: Mon 30 Nov (month-end rotation rebalance), or earlier if a stop or target is hit or BTC triggers."
+     ],
+     "text": "- SOL 25% (EUR 250), CIO idea — VETO. The only defensible stop is below the 55-bar 4h low of 64.87, which is 8.4% below 70.85. On EUR 250 that's about EUR 21 plus fees, above the EUR 20 per-trade cap. It also has no validated signal (Kenji). Rejected.\n- EURUSD 2x, EUR 500 notional, Macro idea — CUT. It's within my risk caps: a stop 2.5×ATR away (1.66%) is about EUR 8.4. But Elena's 25% theme cap makes it EUR 250 at 1x. I also flag our USD stacking: SXR8 and AAPL are both USD assets, so with the short we're about 75% long USD in EUR terms. Marcus's own \"ignored scenario\", a dovish Fed and a weaker USD, would hit all three legs at once.\n- SXR8 25%: approved with a stop at 651.79, which is 2.5×ATR(14) = 2.5 × 16.08 below. Risk is EUR 16.82 including both fees, so 1.68% of equity.\n- AAPL 25%: approved with a stop at 304.46 EUR (2.5×ATR = 2.5 × 8.03 USD, converted at 1.0970). Risk is EUR 16.81, so 1.68%. Gap risk: AAPL can gap through the stop at the US open, so a 3% gap would add about EUR 7.\n- Portfolio: the total risk if every stop is hit is EUR 37.83 (3.78%), inside the 5% limit. Over the last year, the historical 99% one-day loss on these three positions is EUR 14.87, and the worst 5-day window was −EUR 28.25 (−2.8%). The daily correlation of SXR8 and APC.F is 0.34, which is understated because the trading hours don't line up; I treat the two as one equity bet.\n- Kill switch: at −15% (EUR 850 equity) everything is flattened. That's far away.\n\n---\n## 3. Synthesis and debate\n- Agreed: don't buy crypto now. There's no validated signal, and the SOL trade broke the per-trade cap. Rotation points to US equity in EUR, and AAPL is the cleanest relative-strength leader.\n- Conflict:\n  - Kenji's point that \"SXR8 momentum is partly USD\" against Marcus's \"USD trend\". Together they show that the whole book leans on a strong USD.\n  - Elena wanted 75% invested, including crypto. Sofia's ruling leaves about 50% cash.\n- Blind spots:\n  - The SXR8 entry comes 4 days before the formal month-end rebalance.\n  - Holiday liquidity means AAPL's EUR price isn't confirmed until the US reopens on Friday.\n  - The equity legs are likely correlated in a sell-off.\n- Resolution: keep the USD short at a small size (EUR 4.20 risk) as the explicit trend expression. If a dovish-Fed scenario appears (EURUSD back above its 50d at 1.1197), the CEO will review all three legs together.\n\n---\n## 4. CEO final decision\n| # | Action | Instrument | Qty | Fill | Size | Stop | Target | Risk at stop |\n|---|---|---|---|---|---|---|---|---|\n| 1 | BUY | SXR8.DE (EUR) | 0.3593 | 693.038 | EUR 250.01 incl. fee (25.0%) | 651.79 | 755.30 | EUR 16.82 |\n| 2 | BUY | Apple, APC.F (EUR) | 0.7692 | 323.7182 | EUR 250.00 incl. fee (25.0%) | 304.46 | 368.48 (2.5R) | EUR 16.81 |\n| 3 | SELL (short) | EURUSD CFD | EUR 250 notional, 1x | 1.09690 | EUR 250 notional (25.0%), margin EUR 8.33 | 1.11566 | 1.05938 (2R) | EUR 4.20 |\n| 4 | Conditional BUY (not filled) | BTC-EUR | up to EUR 250 | on a 4h close above 65,447 USDT | — | 2.5× 4h ATR | — | ≤ EUR 20 |\n| — | PASS / VETO | SOL (CRO+Quant), MDT (Quant), EURUSD 2x (CIO cap) | | | | | | |\n\n- Cash after fills: EUR 499.99. Equity marked at 08:15 CET is EUR 996.85 (−0.31%, from fees and spread). Gross exposure is 74.9%.\n- Total risk at stops: EUR 37.83 at entry (3.78%), within the CRO's 5% limit.\n- Exits: mechanical stops and targets, checked by mark.py. The equity stops are reviewed at each IC, and stops may be trailed up to 2.5×ATR but are never loosened.\n- Next IC: Mon 30 Nov (month-end rotation rebalance), or earlier if a stop or target is hit or BTC triggers.\n\nChairman: please give sign-off on the three trades, tell us whether the 25% theme cap should count *USD exposure* as one theme, and name the next sector to investigate. Our suggestion is Nordic energy/Equinor after Brent's −21% month."
+    },
+    "tomas": {
+     "bullets": [
+      "PRIIPs: US-listed ETFs aren't available to EU/EEA retail, so the S&P exposure goes through SXR8 (UCITS, Acc, EUR, Xetra). That's fine.",
+      "AAPL: US cash markets are closed today, but the EUR line trades on Tradegate/Frankfurt from 08:00 to 22:00 CET. The reference price is APC.F 322.75 EUR (last trade 25 Nov 21:34 CET; US close 355.58 USD ÷ 1.0970 = 324.15 EUR). Holiday spreads are wider, so I model 30 bp slippage plus a EUR 1 fee. Fractional shares are fine (Trade Republic-type broker).",
+      "SXR8: reference 692.00 EUR (Xetra close 25 Nov 17:29). I model 15 bp slippage, because the spread before 09:00 is wider, plus a EUR 1 fee.",
+      "EURUSD: a CFD under the ESMA retail rules (30:1 max). Mid 1.09697, modelled spread 1.5 pips, no commission. Overnight financing on a short-EUR position is currently a small credit/debit depending on the broker; I'll track it.",
+      "Fees on small tickets: EUR 1 on EUR 250 is 0.4% each way, so round-trip costs are 0.8–1.4% per stock trade. Don't churn.",
+      "Norwegian tax notes:",
+      "Crypto venues: Kraken or Bitvavo at about 0.25%, if a breakout triggers."
+     ],
+     "text": "- PRIIPs: US-listed ETFs aren't available to EU/EEA retail, so the S&P exposure goes through SXR8 (UCITS, Acc, EUR, Xetra). That's fine.\n- AAPL: US cash markets are closed today, but the EUR line trades on Tradegate/Frankfurt from 08:00 to 22:00 CET. The reference price is APC.F 322.75 EUR (last trade 25 Nov 21:34 CET; US close 355.58 USD ÷ 1.0970 = 324.15 EUR). Holiday spreads are wider, so I model 30 bp slippage plus a EUR 1 fee. Fractional shares are fine (Trade Republic-type broker).\n- SXR8: reference 692.00 EUR (Xetra close 25 Nov 17:29). I model 15 bp slippage, because the spread before 09:00 is wider, plus a EUR 1 fee.\n- EURUSD: a CFD under the ESMA retail rules (30:1 max). Mid 1.09697, modelled spread 1.5 pips, no commission. Overnight financing on a short-EUR position is currently a small credit/debit depending on the broker; I'll track it.\n- Fees on small tickets: EUR 1 on EUR 250 is 0.4% each way, so round-trip costs are 0.8–1.4% per stock trade. Don't churn.\n- Norwegian tax notes:\n  - Gains are taxed as ordinary income at 22%, then grossed up by 1.72, so about 37.84% effective.\n  - Losses are deductible.\n  - SXR8 holds more than 80% non-EEA stocks, so it doesn't qualify for an aksjesparekonto (ASK); nor does AAPL held at a foreign broker. Both are taxed at realisation.\n  - FX/CFD gains are ordinary capital income at 22%.\n  - Report in NOK at the transaction-date rate. EURNOK today is 10.757.\n- Crypto venues: Kraken or Bitvavo at about 0.25%, if a breakout triggers."
+    }
+   }
+  },
+  {
+   "chairman": "Chairman sign-off (2026-11-26 08:38 CET): REJECT approved; Kenji to run the free research backtest.",
+   "claims": "\"$18k/month\"; shown proof is FX Replay backtest, June: +$4,650, 15 trades, 13W/2L (86.67%), avg RR 1.38, 2 YM contracts on a $1k account.",
+   "decision": "REJECT for the live paper book and don't buy signals or courses. Optional: Kenji runs a zero-cost research backtest on real-price data (BTC/ETH 1m via public data) with costs; only revisit if >=300 OOS trades show a positive expectancy after costs.",
+   "decision_table": null,
+   "file": "ic/2026-11-26-video-review.md",
+   "id": "2026-11-26-video-review",
+   "kind": "review",
+   "markdown": "# IC: Review of \"Hybrid Super Scalping Strategy\" video (Alpha GOLD Trading / Jooviers Fkm), 2026-11-26\nMethod: YM futures, 1m Heikin Ashi, 100 EMA trend filter, >=2 clean opposite candles pullback, enter on high-volume doji close, SL beyond doji, TP >=1:1.\nClaims: \"$18k/month\"; shown proof is FX Replay backtest, June: +$4,650, 15 trades, 13W/2L (86.67%), avg RR 1.38, 2 YM contracts on a $1k account.\nElena (CIO): reject as an allocation. 15 trades is no sample, and the trades are 1-min index futures, which don't fit our multi-day book.\nKenji (Quant): the rules are mostly mechanical, so they can be coded and tested. HA prices aren't executable, so test fills on real OHLC with costs. Sample needed: 300+ out-of-sample trades.\nMarcus (Macro): trend-pullback scalps work in trending sessions and die in chop; there's no regime filter.\nSofia (CRO): veto real adoption. 2 YM contracts on a $1k account is far beyond our 2% per-trade risk rule; a ~25pt stop on 2 YM is about $250, or 25% of the account. Simulated proof, hindsight examples, and an upsell to the inner circle are signal-seller red flags.\nTomas (Execution): on 1m, spread, commissions and slippage eat a 1:1 edge. We can't trade YM on a €1k paper book within the rules anyway.\nCEO decision: REJECT for the live paper book and don't buy signals or courses. Optional: Kenji runs a zero-cost research backtest on real-price data (BTC/ETH 1m via public data) with costs; only revisit if >=300 OOS trades show a positive expectancy after costs.\nChairman sign-off (2026-11-26 08:38 CET): REJECT approved; Kenji to run the free research backtest.\n\n## Kenji research backtest (2026-11-26 08:56 CET, Europe/Oslo)\n\nData: public Binance 1-minute BTC/USDT and ETH/USDT, 2025-11-01 to 2026-11-25. In-sample = first 8 months (through 2026-06-30); out-of-sample = 2026-07-01 to 2026-11-25. Doji-body threshold of 0.20 was picked on in-sample after-cost expectancy (0.10 also tested). Fills at the next bar's real open; 0.05% taker fee plus 0.01% slippage per side (12 bps round trip). Full write-up: `research/ha_scalp/REPORT.md`.\n\nAfter costs, a typical doji stop is only about 4 bps of price, so costs are already ~3R on the median trade and 85–95% of trades have costs larger than the 1R target. Win rates collapse to 2–9%. If we only keep the rare stops that are at least as wide as costs (about 16 bps in that subset), out-of-sample expectancy is still negative: BTC 41 trades, −0.95R; ETH 75 trades, −0.53R; combined 116 trades, −0.68R, 51.7% win rate. That is well under the 300-trade bar. A 1.5:1 target and a 07:00–16:00 UTC session filter do not flip the sign.\n\nWith costs turned off, the raw 1:1 pattern is roughly a coin flip (OOS win rates about 50–55%, expectancy near zero to +0.05R). The video's 86.7% win rate on 15 simulated trades does not appear. 87% is approximately the *break-even* win rate you would need after costs with these tight stops, not an observed edge.\n\n**Verdict vs board rule: do not revisit.** No tested variant has ≥300 out-of-sample trades *and* positive expectancy after costs. The paper book is unchanged; no signals or courses were bought.\n",
+   "method": "YM futures, 1m Heikin Ashi, 100 EMA trend filter, >=2 clean opposite candles pullback, enter on high-volume doji close, SL beyond doji, TP >=1:1.",
+   "seq": 2,
+   "time": "2026-11-26T08:38:00+01:00",
+   "title": "IC: Review of \"Hybrid Super Scalping Strategy\" video (Alpha GOLD Trading / Jooviers Fkm), 2026-11-26",
+   "views": {
+    "elena": {
+     "bullets": [
+      "reject as an allocation. 15 trades is no sample, and the trades are 1-min index futures, which don't fit our multi-day book."
+     ],
+     "text": "reject as an allocation. 15 trades is no sample, and the trades are 1-min index futures, which don't fit our multi-day book."
+    },
+    "kenji": {
+     "bullets": [
+      "the rules are mostly mechanical, so they can be coded and tested. HA prices aren't executable, so test fills on real OHLC with costs. Sample needed: 300+ out-of-sample trades."
+     ],
+     "text": "the rules are mostly mechanical, so they can be coded and tested. HA prices aren't executable, so test fills on real OHLC with costs. Sample needed: 300+ out-of-sample trades."
+    },
+    "marcus": {
+     "bullets": [
+      "trend-pullback scalps work in trending sessions and die in chop; there's no regime filter."
+     ],
+     "text": "trend-pullback scalps work in trending sessions and die in chop; there's no regime filter."
+    },
+    "sofia": {
+     "bullets": [
+      "veto real adoption. 2 YM contracts on a $1k account is far beyond our 2% per-trade risk rule; a ~25pt stop on 2 YM is about $250, or 25% of the account. Simulated proof, hindsight examples, and an upsell to the inner circle are signal-seller red flags."
+     ],
+     "text": "veto real adoption. 2 YM contracts on a $1k account is far beyond our 2% per-trade risk rule; a ~25pt stop on 2 YM is about $250, or 25% of the account. Simulated proof, hindsight examples, and an upsell to the inner circle are signal-seller red flags."
+    },
+    "tomas": {
+     "bullets": [
+      "on 1m, spread, commissions and slippage eat a 1:1 edge. We can't trade YM on a €1k paper book within the rules anyway."
+     ],
+     "text": "on 1m, spread, commissions and slippage eat a 1:1 edge. We can't trade YM on a €1k paper book within the rules anyway."
+    }
+   }
+  },
+  {
+   "chairman": null,
+   "decision": "HOLD. No trades. BTC breakout order stays armed. The next scheduled decision point is the 30 Nov rotation date.",
+   "decision_table": null,
+   "file": "ic/2026-11-26-am.md",
+   "id": "2026-11-26-am",
+   "kind": "ic",
+   "markdown": "# Apex Horizon Capital — Investment Committee #2 (AM session)\n**Date:** Thu 26 Nov 2026, 09:06 CET (Oslo) · **Mode:** PAPER · **Session:** am\n**Present:** CEO; CIO Elena Varga; Quant Dr. Kenji Mori; Macro Marcus Lindqvist; Execution Tomas Rask; CRO Sofia Brandt (speaks last)\n**Board rulings in force:** USD exposure is exempt from the CIO 25% theme cap, but the per-position 25% cap, the 2% per-trade risk, the 5% total stop risk and the 15% kill-switch all still apply (08:20). The Alpha GOLD 'Hybrid Super Scalping' video was rejected and is research-only (08:38).\n\n## 1. Mark (mark.py, 08:06:14 UTC = 09:06 CET)\n| Symbol | Last | Price time (CET) | UPL € | To stop | To target | Open risk € |\n|---|---|---|---|---|---|---|\n| SXR8.DE long 0.3593 | €692.00 | 25 Nov 17:29 (Xetra close; no print yet today) | −0.37 | 6.17% | 9.15% | 15.45 |\n| APC.F long 0.7692 | €322.95 | 26 Nov 08:32 (Frankfurt) | −0.59 | 6.07% | 14.10% | 15.22 |\n| EURUSD short €250 | 1.09830 | 26 Nov 09:05 | −0.32 | 1.56% | 3.54% | 3.89 |\n\n- Cash €499.99 · **Equity €996.72** · Total P&L **−€3.28 (−0.33%)** · Gross €747.05 (75.0%) · Risk at stops €34.56 (3.47%, limit 5%) · Drawdown −0.33% (kill −15%).\n- **No stops or targets hit.**\n- **BTC conditional buy:** the last closed 4h bar was 60,521.78 USDT, against a trigger of 65,447, so it did **not** trigger. BTCUSDT spot was 60,595.98 at 09:06 CET and BTC-EUR (Coinbase) €55,133.23. It stays armed.\n- Other live prints: ETHUSDT 1,689.91 · SOLUSDT 70.91 · EURNOK 10.7621 (09:05) · ES=F 7,247.75 (25 Nov 23:55 ET). US cash markets are shut for Thanksgiving.\n\n## 2. Department views\n**CIO — Elena Varga:** The board ruling clears the \"USD theme at cap\" flag. Each position is still about 25% of equity, so none of them can be added to. I'd like to put the 50% cash to work, but I have no new idea that clears Kenji. I propose no change and want the cash deployed at the 30 Nov rotation date or on a BTC breakout.\n\n**Quant — Dr. Kenji Mori:** No validated signal has changed in the 52 minutes since IC #1. The rotation rebalance is 30 Nov. On BTC, 4h trend breakout needs a close above 65,447 and we're 8.0% below it. The swing and mean-reversion sleeves are still unvalidated, and the scalping video is research-only per the board. **I'd veto any discretionary add.**\n\n**Macro — Marcus Lindqvist:** The regime is unchanged: risk-off with a strong USD. EURUSD ticked up 13 pips against us, which is noise inside a 1.56% stop distance. Probabilities are unchanged: bull 30% / base 45% / bear 25%. Thin holiday liquidity today and an early US close tomorrow raise the gap risk in the bear case. I don't argue for adding before Monday.\n\n**Execution — Tomas Rask:** Xetra has only just opened, so the SXR8 mark is still yesterday's close. The APC.F spread on Tradegate stays wide while the US is shut. Any trade today would pay that spread for no signal. No orders.\n\n**CRO — Sofia Brandt (last):** Total risk is 3.47%, leaving €15.27 of headroom. That's below one full €20 slot, so a new trade would need a smaller size anyway. Every position has a stop, per-trade risk is under €20 and the drawdown is 0.33%. The USD exemption is a board decision; I record it, but I keep my flag that all three positions lose together on a USD reversal. **Approve HOLD.**\n\n## 3. Decision\n**HOLD.** No trades. BTC breakout order stays armed. The next scheduled decision point is the 30 Nov rotation date.\n",
+   "seq": 3,
+   "time": "2026-11-26T09:06:00+01:00",
+   "title": "Apex Horizon Capital — Investment Committee #2 (AM session)",
+   "views": {
+    "elena": {
+     "bullets": [
+      "The board ruling clears the \"USD theme at cap\" flag. Each position is still about 25% of equity, so none of them can be added to. I'd like to put the 50% cash to work, but I have no new idea that clears Kenji. I propose no change and want the cash deployed at the 30 Nov rotation date or on a BTC breakout."
+     ],
+     "text": "The board ruling clears the \"USD theme at cap\" flag. Each position is still about 25% of equity, so none of them can be added to. I'd like to put the 50% cash to work, but I have no new idea that clears Kenji. I propose no change and want the cash deployed at the 30 Nov rotation date or on a BTC breakout."
+    },
+    "kenji": {
+     "bullets": [
+      "No validated signal has changed in the 52 minutes since IC #1. The rotation rebalance is 30 Nov. On BTC, 4h trend breakout needs a close above 65,447 and we're 8.0% below it. The swing and mean-reversion sleeves are still unvalidated, and the scalping video is research-only per the board. I'd veto any discretionary add."
+     ],
+     "text": "No validated signal has changed in the 52 minutes since IC #1. The rotation rebalance is 30 Nov. On BTC, 4h trend breakout needs a close above 65,447 and we're 8.0% below it. The swing and mean-reversion sleeves are still unvalidated, and the scalping video is research-only per the board. I'd veto any discretionary add."
+    },
+    "marcus": {
+     "bullets": [
+      "The regime is unchanged: risk-off with a strong USD. EURUSD ticked up 13 pips against us, which is noise inside a 1.56% stop distance. Probabilities are unchanged: bull 30% / base 45% / bear 25%. Thin holiday liquidity today and an early US close tomorrow raise the gap risk in the bear case. I don't argue for adding before Monday."
+     ],
+     "text": "The regime is unchanged: risk-off with a strong USD. EURUSD ticked up 13 pips against us, which is noise inside a 1.56% stop distance. Probabilities are unchanged: bull 30% / base 45% / bear 25%. Thin holiday liquidity today and an early US close tomorrow raise the gap risk in the bear case. I don't argue for adding before Monday."
+    },
+    "sofia": {
+     "bullets": [
+      "Total risk is 3.47%, leaving €15.27 of headroom. That's below one full €20 slot, so a new trade would need a smaller size anyway. Every position has a stop, per-trade risk is under €20 and the drawdown is 0.33%. The USD exemption is a board decision; I record it, but I keep my flag that all three positions lose together on a USD reversal. Approve HOLD."
+     ],
+     "text": "Total risk is 3.47%, leaving €15.27 of headroom. That's below one full €20 slot, so a new trade would need a smaller size anyway. Every position has a stop, per-trade risk is under €20 and the drawdown is 0.33%. The USD exemption is a board decision; I record it, but I keep my flag that all three positions lose together on a USD reversal. Approve HOLD."
+    },
+    "tomas": {
+     "bullets": [
+      "Xetra has only just opened, so the SXR8 mark is still yesterday's close. The APC.F spread on Tradegate stays wide while the US is shut. Any trade today would pay that spread for no signal. No orders."
+     ],
+     "text": "Xetra has only just opened, so the SXR8 mark is still yesterday's close. The APC.F spread on Tradegate stays wide while the US is shut. Any trade today would pay that spread for no signal. No orders."
+    }
+   }
+  }
+ ],
+ "meta": {
+  "as_of": "2026-11-26T08:06:14.880121+00:00",
+  "ceo": "Grok Bot 'Game Developer'",
+  "chairman": "Karli",
+  "generated_from": "/workspace/apex-horizon",
+  "rules": {
+   "crypto_cap_pct": 40.0,
+   "kill_switch_dd_pct": 15.0,
+   "max_leverage": 2.0,
+   "per_position_cap_pct": 25.0,
+   "per_trade_risk_eur": 20.0,
+   "per_trade_risk_pct": 2.0,
+   "total_stop_risk_pct": 5.0,
+   "usd_concentration": "accepted by the Chairman"
+  }
+ },
+ "research": [
+  {
+   "board_rule": "Revisit only if there are ≥300 out-of-sample trades with positive expectancy after costs",
+   "board_rule_table": {
+    "head": [
+     "OOS test (picked doji 0.20, RR = 1, all hours, after costs)",
+     "Trades",
+     "E[R] after costs",
+     "Meets rule?"
+    ],
+    "rows": [
+     [
+      "BTC, viable stops",
+      "41",
+      "−0.953",
+      "No (n and E)"
+     ],
+     [
+      "ETH, viable stops",
+      "75",
+      "−0.532",
+      "No (n and E)"
+     ],
+     [
+      "BTC+ETH combined, viable stops",
+      "116",
+      "−0.681",
+      "No (n and E)"
+     ],
+     [
+      "BTC, unfiltered",
+      "731",
+      "negative (median R −3.59)",
+      "No (E)"
+     ],
+     [
+      "ETH, unfiltered",
+      "560",
+      "negative (median R −2.72)",
+      "No (E)"
+     ]
+    ]
+   },
+   "breakeven_winrate": "87.5%",
+   "costdrag_table": {
+    "head": [
+     "Symbol",
+     "Split",
+     "Doji",
+     "n",
+     "Win rate",
+     "E[R] (mean, distorted)",
+     "Median R",
+     "Median cost/R",
+     "Trades with cost > 1R",
+     "Median stop"
+    ],
+    "rows": [
+     [
+      "BTCUSDT",
+      "IS",
+      "0.20",
+      "863",
+      "4.8%",
+      "−223",
+      "−3.25",
+      "3.03",
+      "90.4%",
+      "3.97 bps"
+     ],
+     [
+      "BTCUSDT",
+      "OOS",
+      "0.20",
+      "731",
+      "2.2%",
+      "−231",
+      "−3.59",
+      "3.54",
+      "94.4%",
+      "3.39 bps"
+     ],
+     [
+      "ETHUSDT",
+      "IS",
+      "0.20",
+      "732",
+      "8.6%",
+      "−16.3",
+      "−2.75",
+      "2.41",
+      "84.0%",
+      "4.97 bps"
+     ],
+     [
+      "ETHUSDT",
+      "OOS",
+      "0.20",
+      "560",
+      "7.9%",
+      "−11.6",
+      "−2.72",
+      "2.51",
+      "86.6%",
+      "4.78 bps"
+     ]
+    ]
+   },
+   "costs": "0.05% taker fee + 0.01% slippage",
+   "data_table": {
+    "head": [
+     "Symbol",
+     "Bars",
+     "Start (UTC)",
+     "End (UTC)"
+    ],
+    "rows": [
+     [
+      "BTCUSDT",
+      "561,600",
+      "2025-11-01 00:00",
+      "2026-11-25 23:59"
+     ],
+     [
+      "ETHUSDT",
+      "561,600",
+      "2025-11-01 00:00",
+      "2026-11-25 23:59"
+     ]
+    ]
+   },
+   "date": "2026-11-26, 08:56 CET (Europe/Oslo)",
+   "file": "research/ha_scalp/REPORT.md",
+   "id": "ha_scalp",
+   "markdown": "# Hybrid Super Scalping Strategy — research backtest\n\nKenji (Quant), Apex Horizon Capital  \nDate: 2026-11-26, 08:56 CET (Europe/Oslo)  \nMandate: Chairman rejected adoption of the Alpha GOLD Trading / Jooviers Fkm “Hybrid Super Scalping Strategy” and authorised a free research-only backtest. No real orders, no paid data, no GPU.\n\n**Verdict against the board rule** (*revisit only if there are ≥300 out-of-sample trades with positive expectancy after costs*): **do not revisit.**\n\nNo tested variant meets both conditions. With a realistic cost model, the typical doji stop is much tighter than round-trip costs, so most trades cannot win at a 1:1 target. Even after dropping those structurally unviable tight stops, out-of-sample expectancy stays negative and the trade count falls well short of 300.\n\n---\n\n## 1. Data\n\nPublic Binance spot 1-minute klines from [data.binance.vision](https://data.binance.vision) (monthly zips plus daily zips for November 2026). Timestamps in the files are microseconds; they are parsed accordingly.\n\n| Symbol | Bars | Start (UTC) | End (UTC) |\n|---|---:|---|---|\n| BTCUSDT | 561,600 | 2025-11-01 00:00 | 2026-11-25 23:59 |\n| ETHUSDT | 561,600 | 2025-11-01 00:00 | 2026-11-25 23:59 |\n\nNo missing minutes in either series (390 calendar days × 1,440 = 561,600).\n\n**Split (calendar, fixed before looking at results):**\n\n- In-sample (IS): 2025-11-01 through 2026-06-30 (8 months, 348,480 bars). Used only to pick the doji-body threshold.\n- Out-of-sample (OOS): 2026-07-01 through 2026-11-25 (4 months 25 days, 213,120 bars). Untouched for parameter choice.\n\nThat is slightly more than 12 months in total, and slightly more than 4 months of OOS. Both choices add power rather than shrink the holdout.\n\n## 2. Mechanical rules\n\nCoded as specified. Fills are always at **real** OHLC, never at Heikin Ashi prices.\n\n1. **Heikin Ashi** from real OHLC:  \n   `HA_close = (O+H+L+C)/4`, `HA_open[0] = (O+C)/2`, `HA_open[t] = (HA_open[t-1] + HA_close[t-1])/2`,  \n   `HA_high = max(H, HA_open, HA_close)`, `HA_low = min(L, HA_open, HA_close)`.\n2. **Trend filter:** 100-period EMA of the **real close**. Long only if real close is above the EMA **and** a higher low has formed; short only if below the EMA **and** a lower high has formed.\n3. **Swings (3-bar fractals):** bar `t-1` is a swing high once bar `t` has closed, if `high[t-1]` is strictly greater than `high[t-2]` and `high[t]`. A swing low is the mirror image. Ties are not swings. A higher low has formed at `t` when the two most recently *confirmed* swing lows satisfy `last > previous`. A newer lower swing low turns the flag off. Same logic for lower highs. No lookahead into `t+1`.\n4. **Pullback:** at least two consecutive clean opposite-colour HA candles immediately before the doji. For longs, clean red means `HA_close < HA_open` and no upper wick (`HA_high == HA_open`). For shorts, clean green and no lower wick.\n5. **Trigger:** an HA doji whose body / HA range is ≤ the threshold (0.10 and 0.20 were both tested), and whose volume is ≥ the max of the previous 3 bars. A zero-range bar is not a doji.\n6. **Entry:** next bar’s **real open**. Stop is 1 tick (0.01 USDT) beyond the doji bar’s **real** low (long) or high (short). Take-profit at 1:1 and, separately, 1.5:1, measured from the intended entry to that stop. If the next open is already through the stop, or planned risk is less than 1 tick, the trade is skipped.\n7. **Simulation:** one position at a time. If a bar’s range contains both stop and target, the stop is assumed hit first. A gap through either level fills at that bar’s open. No time stop. Open trades at the end of a split are marked to market at the last close (none were, in the viable-stop runs reported below). First 300 bars of each split are a warmup (3 × EMA length).\n\nOptional **session filter:** only take signals between 07:00 and 16:00 UTC (London open through mid-New York).\n\n## 3. Costs\n\nPer side: **0.05% taker fee + 0.01% slippage**, with a 1-tick floor on the slippage amount. On BTC and ETH, 0.01% is much larger than 1 tick, so round-trip costs are almost exactly **12 basis points of price** (empirically 11.97–12.03 bps in the trade logs).\n\nEvery variant is also reported with **zero costs**, so the cost drag is visible.\n\n**Important execution filter, added after seeing the raw results (and documented here so it is not hidden):** a typical doji stop is only about 4 bps of price, so 12 bps of costs are already ~3R. Mean R then gets blown up by a handful of near-zero-risk stops (risk down to 1e-13 from floating point). Two views are therefore reported:\n\n- **1-tick floor only (“unfiltered”).** All trades with planned risk ≥ 1 tick. Medians and “fraction of trades with costs > 1R” are the honest summaries; the mean R is not.\n- **Viable-stop filter (`min_risk_frac = 0.0012`).** Skip any trade whose planned stop is tighter than estimated round-trip costs. This is an execution reality, not a change to the signal rules. The doji threshold was picked on this view.\n\n## 4. In-sample parameter pick\n\nThe doji-body threshold was chosen on **in-sample, after-cost expectancy**, RR = 1, all hours, viable-stop filter, equal-weighted across BTC and ETH. Tie-break: more trades, then the stricter threshold.\n\n| Doji threshold | BTC IS E[R] | ETH IS E[R] | Mean E[R] | Trades (BTC+ETH) |\n|---:|---:|---:|---:|---:|\n| 0.10 | −0.689 | −0.770 | −0.729 | 81 |\n| **0.20 (picked)** | −0.733 | −0.586 | **−0.659** | **200** |\n\nBoth are negative. 0.20 is less bad and has more trades, so it is the primary setting. 0.10 is still shown everywhere as a sensitivity.\n\n## 5. Primary results — after costs, viable stops (RR = 1, all hours)\n\nThis is the cleanest after-cost test: only trades whose stop is wide enough that a 1:1 target can theoretically clear 12 bps of costs. Median stop in this subset is about 16 bps, so costs still consume ~0.70–0.75R per trade.\n\n| Symbol | Split | Doji | n | Win rate | E[R] after costs | Median R | Profit factor | Max DD (R) | Mean cost/R | Median cost/R |\n|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n| BTCUSDT | IS | 0.10 | 31 | 51.6% | −0.689 | +0.026 | 0.18 | −19.8 | 0.72 | 0.76 |\n| BTCUSDT | IS | 0.20 | 83 | 49.4% | −0.733 | −1.227 | 0.15 | −59.2 | 0.72 | 0.77 |\n| BTCUSDT | **OOS** | 0.10 | 16 | 50.0% | −0.748 | −0.802 | 0.14 | −12.2 | 0.75 | 0.74 |\n| BTCUSDT | **OOS** | **0.20** | **41** | **39.0%** | **−0.953** | **−1.627** | **0.11** | **−37.7** | **0.73** | **0.74** |\n| ETHUSDT | IS | 0.10 | 50 | 46.0% | −0.770 | −1.270 | 0.14 | −39.0 | 0.69 | 0.69 |\n| ETHUSDT | IS | 0.20 | 117 | 53.8% | −0.586 | +0.044 | 0.23 | −69.0 | 0.66 | 0.66 |\n| ETHUSDT | **OOS** | 0.10 | 37 | 64.9% | −0.407 | +0.149 | 0.33 | −17.3 | 0.71 | 0.73 |\n| ETHUSDT | **OOS** | **0.20** | **75** | **58.7%** | **−0.532** | **+0.081** | **0.25** | **−40.5** | **0.71** | **0.73** |\n| **Combined** | **OOS** | **0.20** | **116** | **51.7%** | **−0.681** | **+0.017** | **0.19** | **−77.6** | **0.72** | **0.73** |\n\nRaising the target to 1.5:1 does not flip the sign (picked OOS after costs: BTC −0.880R on 41 trades; ETH −0.372R on 75; combined 116 trades, −0.552R, 46.6% win rate). Average hold is about 5–6 minutes in-sample and 10–14 minutes out-of-sample.\n\n## 6. The same trades with costs turned off\n\nOn the viable-stop subset, zero-cost expectancy is a coin-flip around zero in-sample, and mixed out-of-sample (BTC picked OOS −0.220R on 41 trades; ETH +0.173R on 75). Costs then subtract ~0.70R and push every after-cost figure negative.\n\nOn the **unfiltered** set (1-tick floor only), zero-cost OOS at the picked threshold, RR = 1, is barely positive and nothing like the video’s 86.7% win rate:\n\n| Symbol | Split | Doji | n | Win rate | E[R] (zero cost) | Profit factor | Max DD (R) |\n|---|---|---:|---:|---:|---:|---:|---:|\n| BTCUSDT | IS | 0.20 | 863 | 48.3% | −0.034 | 0.94 | −69 |\n| BTCUSDT | OOS | 0.20 | 731 | 52.5% | +0.051 | 1.11 | −24 |\n| ETHUSDT | IS | 0.20 | 732 | 46.3% | −0.074 | 0.86 | −75 |\n| ETHUSDT | OOS | 0.20 | 560 | 50.2% | +0.004 | 1.01 | −30 |\n\nA slight OOS bump at 1.5:1 (BTC +0.134R, ETH +0.078R, still zero-cost) is not an edge that survives 12 bps of costs.\n\n## 7. After costs, no minimum-stop filter — the cost drag\n\nThis is the raw rule, and it is worse. Median planned stop is about **3–5 bps** of price. Round-trip costs are **12 bps**. So on the median trade, costs are already ~3R, and a 1:1 target is unreachable after costs.\n\n| Symbol | Split | Doji | n | Win rate | E[R] (mean, distorted) | Median R | Median cost/R | Trades with cost > 1R | Median stop |\n|---|---|---:|---:|---:|---:|---:|---:|---:|---:|\n| BTCUSDT | IS | 0.20 | 863 | 4.8% | −223 | −3.25 | 3.03 | 90.4% | 3.97 bps |\n| BTCUSDT | OOS | 0.20 | 731 | 2.2% | −231 | −3.59 | 3.54 | 94.4% | 3.39 bps |\n| ETHUSDT | IS | 0.20 | 732 | 8.6% | −16.3 | −2.75 | 2.41 | 84.0% | 4.97 bps |\n| ETHUSDT | OOS | 0.20 | 560 | 7.9% | −11.6 | −2.72 | 2.51 | 86.6% | 4.78 bps |\n\nThe mean E[R] is not a usable portfolio number here: a few microscopically tight stops divide a normal dollar cost by a near-zero risk. The **median** tells the story: you lose about 3R per trade, and 85–95% of trades have costs larger than the entire 1R target. That is the cost drag the zero-cost column is meant to show.\n\n## 8. Why ~87% is the break-even win rate, not an observed one\n\nOn a viable ~16 bp stop, costs are ~12 bps ≈ 0.75R. A 1:1 winner then nets about +0.25R; a loser nets about −1.75R. Break-even win rate is\n\n```\n1.75 / (0.25 + 1.75) = 87.5%\n```\n\nThe video’s FX Replay sample (15 trades, 13 wins, 86.67%) sits right on that break-even line — and that was in a simulator, without live costs of this size, on a different market. It is not evidence of an edge. In this study, even ETH’s best after-cost OOS win rate (64.9% on 37 viable-stop trades) still has negative expectancy (−0.407R), because winners only keep a thin slice of 1R.\n\n## 9. Session filter (07:00–16:00 UTC)\n\nThe liquid-hours cut does not rescue the method. After costs, viable stops, picked doji 0.20, RR = 1, OOS:\n\n- BTC: 22 trades, 36.4% win rate, E[R] = −0.949, profit factor 0.12\n- ETH: 26 trades, 61.5% win rate, E[R] = −0.446, profit factor 0.32\n\nETH 07–16 UTC at the *other* threshold (doji 0.10) printed a 71.4% win rate, but on 14 trades, still −0.227R after costs. That is a small, selected cell, not a result.\n\n## 10. Board rule, applied literally\n\nRevisit only if **≥300 out-of-sample trades** *and* **positive expectancy after costs**.\n\n| OOS test (picked doji 0.20, RR = 1, all hours, after costs) | Trades | E[R] after costs | Meets rule? |\n|---|---:|---:|---|\n| BTC, viable stops | 41 | −0.953 | No (n and E) |\n| ETH, viable stops | 75 | −0.532 | No (n and E) |\n| BTC+ETH combined, viable stops | 116 | −0.681 | No (n and E) |\n| BTC, unfiltered | 731 | negative (median R −3.59) | No (E) |\n| ETH, unfiltered | 560 | negative (median R −2.72) | No (E) |\n\nTrade counts above 300 only appear when tight, cost-doomed stops are left in. Their expectancy is not positive. The paper book is unchanged. Signals and courses remain unbought.\n\n## 11. Code, tests, and artefacts\n\nAll under `/workspace/apex-horizon/research/ha_scalp/`:\n\n- `ha.py`, `signals.py`, `backtest.py`, `fetch_data.py`, `run_study.py`\n- `tests/` — 17 unit tests for HA arithmetic, fractal confirmation without lookahead, doji/wick/volume rules, next-bar real-open fills, cost drag, session filter, and the minimum-stop skip. All passed.\n- `data/binance_{BTCUSDT,ETHUSDT}_1m.csv.gz`\n- `results/metrics.csv`, trade logs `results/trades_*.csv.gz`, and the summary tables `results/table_*.csv`\n\nRe-run: `/workspace/trading-bot/crypto/.venv/bin/python fetch_data.py` then `python run_study.py` from this directory. `pytest tests/` for the unit tests.\n\n## 12. Caveats\n\n- This is a test of the *mechanical* rules on crypto spot 1-minute data, not of Dow futures (YM) and not of a discretionary overlay the video may have used off-camera.\n- Binance spot taker fees of 0.05% are a fair research default; a fee-tiered or maker-only model would change the 12 bp figure, but not the fact that typical stops here are 3–5 bps.\n- No walk-forward beyond the single 8/4 split, and no claim that the slight zero-cost OOS bump is real. It does not survive costs in any case.\n- Results are in R-multiples, not euros of the €1,000 paper book. Position sizing was not applied; it would not turn a negative expectancy after costs into a positive one.\n",
+   "primary_table": {
+    "head": [
+     "Symbol",
+     "Split",
+     "Doji",
+     "n",
+     "Win rate",
+     "E[R] after costs",
+     "Median R",
+     "Profit factor",
+     "Max DD (R)",
+     "Mean cost/R",
+     "Median cost/R"
+    ],
+    "rows": [
+     [
+      "BTCUSDT",
+      "IS",
+      "0.10",
+      "31",
+      "51.6%",
+      "−0.689",
+      "+0.026",
+      "0.18",
+      "−19.8",
+      "0.72",
+      "0.76"
+     ],
+     [
+      "BTCUSDT",
+      "IS",
+      "0.20",
+      "83",
+      "49.4%",
+      "−0.733",
+      "−1.227",
+      "0.15",
+      "−59.2",
+      "0.72",
+      "0.77"
+     ],
+     [
+      "BTCUSDT",
+      "**OOS**",
+      "0.10",
+      "16",
+      "50.0%",
+      "−0.748",
+      "−0.802",
+      "0.14",
+      "−12.2",
+      "0.75",
+      "0.74"
+     ],
+     [
+      "BTCUSDT",
+      "**OOS**",
+      "**0.20**",
+      "**41**",
+      "**39.0%**",
+      "**−0.953**",
+      "**−1.627**",
+      "**0.11**",
+      "**−37.7**",
+      "**0.73**",
+      "**0.74**"
+     ],
+     [
+      "ETHUSDT",
+      "IS",
+      "0.10",
+      "50",
+      "46.0%",
+      "−0.770",
+      "−1.270",
+      "0.14",
+      "−39.0",
+      "0.69",
+      "0.69"
+     ],
+     [
+      "ETHUSDT",
+      "IS",
+      "0.20",
+      "117",
+      "53.8%",
+      "−0.586",
+      "+0.044",
+      "0.23",
+      "−69.0",
+      "0.66",
+      "0.66"
+     ],
+     [
+      "ETHUSDT",
+      "**OOS**",
+      "0.10",
+      "37",
+      "64.9%",
+      "−0.407",
+      "+0.149",
+      "0.33",
+      "−17.3",
+      "0.71",
+      "0.73"
+     ],
+     [
+      "ETHUSDT",
+      "**OOS**",
+      "**0.20**",
+      "**75**",
+      "**58.7%**",
+      "**−0.532**",
+      "**+0.081**",
+      "**0.25**",
+      "**−40.5**",
+      "**0.71**",
+      "**0.73**"
+     ],
+     [
+      "**Combined**",
+      "**OOS**",
+      "**0.20**",
+      "**116**",
+      "**51.7%**",
+      "**−0.681**",
+      "**+0.017**",
+      "**0.19**",
+      "**−77.6**",
+      "**0.72**",
+      "**0.73**"
+     ]
+    ]
+   },
+   "roundtrip_bps": 12,
+   "title": "Hybrid Super Scalping Strategy — research backtest",
+   "verdict": "Do not revisit"
+  }
+ ],
+ "rulings": [
+  {
+   "text": "USD exposure is NOT counted as a single theme under the CIO's 25% cap. The Chairman accepts USD concentration for growth. The per-position 25% cap, CRO per-trade 2% risk, 5% total stop risk, and 15% drawdown kill-switch still apply.",
+   "time": "2026-11-26T08:20:00+01:00"
+  },
+  {
+   "text": "Video 'Hybrid Super Scalping Strategy' (Alpha GOLD Trading) REJECTED for the book; no signals or courses bought. Research-only backtest authorized; it can be revisited only with 300+ OOS trades showing a positive expectancy after costs.",
+   "time": "2026-11-26T08:38:00+01:00"
+  }
+ ],
+ "team": [
+  {
+   "dept": "Allocation",
+   "hdr": "CIO",
+   "history": [
+    {
+     "bullets": [
+      "Ranked shortlist:",
+      "Target weights: SXR8 25%, AAPL 25%, SOL 25%, cash 25%.",
+      "What makes me wrong: if this is the start of a bear market (S&P cash index already below its 200d), all three are long beta.",
+      "Challenge to Macro: Marcus will want a 2x USD trade. The 25% theme cap applies to notional, not to risk."
+     ],
+     "ic": "2026-11-26",
+     "ic_title": "Apex Horizon Capital — Investment Committee #1",
+     "text": "- Ranked shortlist:\n  1. US equity beta through a UCITS ETF (SXR8.DE, iShares Core S&P 500 Acc, EUR). It's the top asset on the rotation's 3/6/12m blend at +4.2%; EUNL (MSCI World) is +4.1%, EQQQ −1.8%, IS3N (EM) −4.6%, 4GLD (gold) −13.9%.\n  2. Single-stock relative-strength leader: Apple. It's at 355.58 USD, 0.2% below its 52-week high, above its 50d (342.84) and 200d (303.96), and up 29.3% over 12 months, while the S&P fell 7% this month. NVDA (−31% 1m), GOOGL (−32% from its high) and AVGO (−37%) are falling knives.\n  3. Crypto rebound. SOL is −38% over 3 months and 42% below its 52-week high, and BTC's daily RSI(14) is 19.4, a classic capitulation reading. Proposal: SOL 25% (EUR 250) for a fast mean-reversion trade.\n- Target weights: SXR8 25%, AAPL 25%, SOL 25%, cash 25%.\n- What makes me wrong: if this is the start of a bear market (S&P cash index already below its 200d), all three are long beta.\n- Challenge to Macro: Marcus will want a 2x USD trade. The 25% theme cap applies to notional, not to risk.",
+     "time": "2026-11-26T08:10:00+01:00"
+    },
+    {
+     "bullets": [
+      "reject as an allocation. 15 trades is no sample, and the trades are 1-min index futures, which don't fit our multi-day book."
+     ],
+     "ic": "2026-11-26-video-review",
+     "ic_title": "IC: Review of \"Hybrid Super Scalping Strategy\" video (Alpha GOLD Trading / Jooviers Fkm), 2026-11-26",
+     "text": "reject as an allocation. 15 trades is no sample, and the trades are 1-min index futures, which don't fit our multi-day book.",
+     "time": "2026-11-26T08:38:00+01:00"
+    },
+    {
+     "bullets": [
+      "The board ruling clears the \"USD theme at cap\" flag. Each position is still about 25% of equity, so none of them can be added to. I'd like to put the 50% cash to work, but I have no new idea that clears Kenji. I propose no change and want the cash deployed at the 30 Nov rotation date or on a BTC breakout."
+     ],
+     "ic": "2026-11-26-am",
+     "ic_title": "Apex Horizon Capital — Investment Committee #2 (AM session)",
+     "text": "The board ruling clears the \"USD theme at cap\" flag. Each position is still about 25% of equity, so none of them can be added to. I'd like to put the 50% cash to work, but I have no new idea that clears Kenji. I propose no change and want the cash deployed at the 30 Nov rotation date or on a BTC breakout.",
+     "time": "2026-11-26T09:06:00+01:00"
+    }
+   ],
+   "key": "elena",
+   "latest": {
+    "bullets": [
+     "The board ruling clears the \"USD theme at cap\" flag. Each position is still about 25% of equity, so none of them can be added to. I'd like to put the 50% cash to work, but I have no new idea that clears Kenji. I propose no change and want the cash deployed at the 30 Nov rotation date or on a BTC breakout."
+    ],
+    "ic": "2026-11-26-am",
+    "ic_title": "Apex Horizon Capital — Investment Committee #2 (AM session)",
+    "text": "The board ruling clears the \"USD theme at cap\" flag. Each position is still about 25% of equity, so none of them can be added to. I'd like to put the 50% cash to work, but I have no new idea that clears Kenji. I propose no change and want the cash deployed at the 30 Nov rotation date or on a BTC breakout.",
+    "time": "2026-11-26T09:06:00+01:00"
+   },
+   "name": "Elena Varga",
+   "role": "CIO",
+   "short": "Elena"
+  },
+  {
+   "dept": "Signals & out-of-sample",
+   "hdr": "Quant",
+   "history": [
+    {
+     "bullets": [
+      "Rotation (dual momentum, 3/6/12m): out of sample from 2017 to 2026, the stock bot's rotation sleeve made 10.6% a year with a 19% max drawdown. That's our only stock signal validated out of sample. Today only SXR8 and EUNL have a positive blend, and they're the same exposure, so it's one slot: SXR8 is validated. The caveat is that the formal rebalance date is month-end (30 Nov), so this is a few days early.",
+      "Swing (RSI(2) under 10, above 200d): today's scan of the 30-name universe fires on MDT only (RSI2 7.5, 96.06 against a 200d of 87.15). The swing sleeve had no out-of-sample edge from 2017 to 2026, so I veto MDT.",
+      "Crypto: the bot's validated strategy is the 4h trend breakout (Donchian 55, ADX of at least 18). Live 4h at 08:00 CET:",
+      "AAPL: single-stock momentum isn't one of our backtested sleeves. I don't veto it, because the momentum factor has decades of public evidence, but I flag it: insufficient firm-specific evidence, so size it on risk and use a mechanical stop.",
+      "Challenge to the CIO: in EUR, SXR8 sits just above its 200d (692.00 against 690.40), only because the USD rallied. In USD the S&P is below its 200d. Our \"positive momentum\" is partly a currency trade."
+     ],
+     "ic": "2026-11-26",
+     "ic_title": "Apex Horizon Capital — Investment Committee #1",
+     "text": "- Rotation (dual momentum, 3/6/12m): out of sample from 2017 to 2026, the stock bot's rotation sleeve made 10.6% a year with a 19% max drawdown. That's our only stock signal validated out of sample. Today only SXR8 and EUNL have a positive blend, and they're the same exposure, so it's one slot: SXR8 is validated. The caveat is that the formal rebalance date is month-end (30 Nov), so this is a few days early.\n- Swing (RSI(2) under 10, above 200d): today's scan of the 30-name universe fires on MDT only (RSI2 7.5, 96.06 against a 200d of 87.15). The swing sleeve had no out-of-sample edge from 2017 to 2026, so I veto MDT.\n- Crypto: the bot's validated strategy is the 4h trend breakout (Donchian 55, ADX of at least 18). Live 4h at 08:00 CET:\n  - BTC 60,468 against a 55-bar high of 65,447 (low 55,130), ADX 20.5, RSI(4h) 50.9\n  - ETH 1,686.94 against 1,845.07, ADX 16.0\n  - SOL 70.85 against 78.48, ADX 16.0\n  - No breakout signal. Mean reversion lost money in and out of sample in our backtests, and a daily RSI of 19 is exactly what it bought on its way down. I veto Elena's SOL trade as unvalidated. The out-of-sample result of the crypto trend strategy was weak (+9.5% a year, about +1% in the strict test), so it gets a conditional order at most.\n- AAPL: single-stock momentum isn't one of our backtested sleeves. I don't veto it, because the momentum factor has decades of public evidence, but I flag it: insufficient firm-specific evidence, so size it on risk and use a mechanical stop.\n- Challenge to the CIO: in EUR, SXR8 sits just above its 200d (692.00 against 690.40), only because the USD rallied. In USD the S&P is below its 200d. Our \"positive momentum\" is partly a currency trade.",
+     "time": "2026-11-26T08:10:00+01:00"
+    },
+    {
+     "bullets": [
+      "the rules are mostly mechanical, so they can be coded and tested. HA prices aren't executable, so test fills on real OHLC with costs. Sample needed: 300+ out-of-sample trades."
+     ],
+     "ic": "2026-11-26-video-review",
+     "ic_title": "IC: Review of \"Hybrid Super Scalping Strategy\" video (Alpha GOLD Trading / Jooviers Fkm), 2026-11-26",
+     "text": "the rules are mostly mechanical, so they can be coded and tested. HA prices aren't executable, so test fills on real OHLC with costs. Sample needed: 300+ out-of-sample trades.",
+     "time": "2026-11-26T08:38:00+01:00"
+    },
+    {
+     "bullets": [
+      "No validated signal has changed in the 52 minutes since IC #1. The rotation rebalance is 30 Nov. On BTC, 4h trend breakout needs a close above 65,447 and we're 8.0% below it. The swing and mean-reversion sleeves are still unvalidated, and the scalping video is research-only per the board. I'd veto any discretionary add."
+     ],
+     "ic": "2026-11-26-am",
+     "ic_title": "Apex Horizon Capital — Investment Committee #2 (AM session)",
+     "text": "No validated signal has changed in the 52 minutes since IC #1. The rotation rebalance is 30 Nov. On BTC, 4h trend breakout needs a close above 65,447 and we're 8.0% below it. The swing and mean-reversion sleeves are still unvalidated, and the scalping video is research-only per the board. I'd veto any discretionary add.",
+     "time": "2026-11-26T09:06:00+01:00"
+    }
+   ],
+   "key": "kenji",
+   "latest": {
+    "bullets": [
+     "No validated signal has changed in the 52 minutes since IC #1. The rotation rebalance is 30 Nov. On BTC, 4h trend breakout needs a close above 65,447 and we're 8.0% below it. The swing and mean-reversion sleeves are still unvalidated, and the scalping video is research-only per the board. I'd veto any discretionary add."
+    ],
+    "ic": "2026-11-26-am",
+    "ic_title": "Apex Horizon Capital — Investment Committee #2 (AM session)",
+    "text": "No validated signal has changed in the 52 minutes since IC #1. The rotation rebalance is 30 Nov. On BTC, 4h trend breakout needs a close above 65,447 and we're 8.0% below it. The swing and mean-reversion sleeves are still unvalidated, and the scalping video is research-only per the board. I'd veto any discretionary add.",
+    "time": "2026-11-26T09:06:00+01:00"
+   },
+   "name": "Dr. Kenji Mori",
+   "role": "Quant",
+   "short": "Kenji"
+  },
+  {
+   "dept": "Regime",
+   "hdr": "Macro",
+   "history": [
+    {
+     "bullets": [
+      "Regime: risk-off with a strong dollar:",
+      "Catalysts in the next 90 days: the December FOMC, ECB and Norges Bank meetings; US data (payrolls and CPI) while the 10y is 4.85% after peaking around 5.36%; and year-end and month-end rebalancing (30 Nov) during holiday liquidity.",
+      "Scenarios for the next 3 months, risk assets:",
+      "What everyone is ignoring: if the Fed turns dovish because markets crash, the USD can reverse sharply. That hurts our EUR-denominated returns on US assets *and* a USD long at the same time.",
+      "Proposal: short EURUSD at 2x, EUR 500 notional. It's the cleanest trend on the board: below the 50d and 200d, with a 3-month slope of −5.4%.",
+      "Challenge to the CIO: buying SOL at RSI 19 in a dollar-up, liquidity-draining tape is catching a falling knife. I side with Kenji."
+     ],
+     "ic": "2026-11-26",
+     "ic_title": "Apex Horizon Capital — Investment Committee #1",
+     "text": "- Regime: risk-off with a strong dollar:\n  - VIX is 28.3 against a 50-day average of 19.0\n  - the Nasdaq is −12% this month\n  - DXY is +4.1% over 3 months and EURUSD is −5.4%\n  - gold is −20.6% over 3 months, so it isn't hedging; that looks like forced deleveraging\n  - Brent is −21% this month, which weighs on NOK (EURNOK +3.6% in 1m)\n- Catalysts in the next 90 days: the December FOMC, ECB and Norges Bank meetings; US data (payrolls and CPI) while the 10y is 4.85% after peaking around 5.36%; and year-end and month-end rebalancing (30 Nov) during holiday liquidity.\n- Scenarios for the next 3 months, risk assets:\n  - Bull, 30%: VIX falls back under 20, the S&P recovers its 200d, and the leaders (AAPL) break out. SXR8 +6–8%.\n  - Base, 45%: choppy range trading, and the USD stays firm. Little net change in equities, while EURUSD drifts toward 1.07–1.08.\n  - Bear, 25%: credit or earnings stress. The S&P falls through its 200d to about −15% from the high, crypto tests the 55k lows, and both equity stops are hit.\n- What everyone is ignoring: if the Fed turns dovish because markets crash, the USD can reverse sharply. That hurts our EUR-denominated returns on US assets *and* a USD long at the same time.\n- Proposal: short EURUSD at 2x, EUR 500 notional. It's the cleanest trend on the board: below the 50d and 200d, with a 3-month slope of −5.4%.\n- Challenge to the CIO: buying SOL at RSI 19 in a dollar-up, liquidity-draining tape is catching a falling knife. I side with Kenji.",
+     "time": "2026-11-26T08:10:00+01:00"
+    },
+    {
+     "bullets": [
+      "trend-pullback scalps work in trending sessions and die in chop; there's no regime filter."
+     ],
+     "ic": "2026-11-26-video-review",
+     "ic_title": "IC: Review of \"Hybrid Super Scalping Strategy\" video (Alpha GOLD Trading / Jooviers Fkm), 2026-11-26",
+     "text": "trend-pullback scalps work in trending sessions and die in chop; there's no regime filter.",
+     "time": "2026-11-26T08:38:00+01:00"
+    },
+    {
+     "bullets": [
+      "The regime is unchanged: risk-off with a strong USD. EURUSD ticked up 13 pips against us, which is noise inside a 1.56% stop distance. Probabilities are unchanged: bull 30% / base 45% / bear 25%. Thin holiday liquidity today and an early US close tomorrow raise the gap risk in the bear case. I don't argue for adding before Monday."
+     ],
+     "ic": "2026-11-26-am",
+     "ic_title": "Apex Horizon Capital — Investment Committee #2 (AM session)",
+     "text": "The regime is unchanged: risk-off with a strong USD. EURUSD ticked up 13 pips against us, which is noise inside a 1.56% stop distance. Probabilities are unchanged: bull 30% / base 45% / bear 25%. Thin holiday liquidity today and an early US close tomorrow raise the gap risk in the bear case. I don't argue for adding before Monday.",
+     "time": "2026-11-26T09:06:00+01:00"
+    }
+   ],
+   "key": "marcus",
+   "latest": {
+    "bullets": [
+     "The regime is unchanged: risk-off with a strong USD. EURUSD ticked up 13 pips against us, which is noise inside a 1.56% stop distance. Probabilities are unchanged: bull 30% / base 45% / bear 25%. Thin holiday liquidity today and an early US close tomorrow raise the gap risk in the bear case. I don't argue for adding before Monday."
+    ],
+    "ic": "2026-11-26-am",
+    "ic_title": "Apex Horizon Capital — Investment Committee #2 (AM session)",
+    "text": "The regime is unchanged: risk-off with a strong USD. EURUSD ticked up 13 pips against us, which is noise inside a 1.56% stop distance. Probabilities are unchanged: bull 30% / base 45% / bear 25%. Thin holiday liquidity today and an early US close tomorrow raise the gap risk in the bear case. I don't argue for adding before Monday.",
+    "time": "2026-11-26T09:06:00+01:00"
+   },
+   "name": "Marcus Lindqvist",
+   "role": "Macro",
+   "short": "Marcus"
+  },
+  {
+   "dept": "Risk (hard veto)",
+   "hdr": "CRO",
+   "history": [
+    {
+     "bullets": [
+      "SOL 25% (EUR 250), CIO idea — VETO. The only defensible stop is below the 55-bar 4h low of 64.87, which is 8.4% below 70.85. On EUR 250 that's about EUR 21 plus fees, above the EUR 20 per-trade cap. It also has no validated signal (Kenji). Rejected.",
+      "EURUSD 2x, EUR 500 notional, Macro idea — CUT. It's within my risk caps: a stop 2.5×ATR away (1.66%) is about EUR 8.4. But Elena's 25% theme cap makes it EUR 250 at 1x. I also flag our USD stacking: SXR8 and AAPL are both USD assets, so with the short we're about 75% long USD in EUR terms. Marcus's own \"ignored scenario\", a dovish Fed and a weaker USD, would hit all three legs at once.",
+      "SXR8 25%: approved with a stop at 651.79, which is 2.5×ATR(14) = 2.5 × 16.08 below. Risk is EUR 16.82 including both fees, so 1.68% of equity.",
+      "AAPL 25%: approved with a stop at 304.46 EUR (2.5×ATR = 2.5 × 8.03 USD, converted at 1.0970). Risk is EUR 16.81, so 1.68%. Gap risk: AAPL can gap through the stop at the US open, so a 3% gap would add about EUR 7.",
+      "Portfolio: the total risk if every stop is hit is EUR 37.83 (3.78%), inside the 5% limit. Over the last year, the historical 99% one-day loss on these three positions is EUR 14.87, and the worst 5-day window was −EUR 28.25 (−2.8%). The daily correlation of SXR8 and APC.F is 0.34, which is understated because the trading hours don't line up; I treat the two as one equity bet.",
+      "Kill switch: at −15% (EUR 850 equity) everything is flattened. That's far away.",
+      "Agreed: don't buy crypto now. There's no validated signal, and the SOL trade broke the per-trade cap. Rotation points to US equity in EUR, and AAPL is the cleanest relative-strength leader.",
+      "Conflict:",
+      "Blind spots:",
+      "Resolution: keep the USD short at a small size (EUR 4.20 risk) as the explicit trend expression. If a dovish-Fed scenario appears (EURUSD back above its 50d at 1.1197), the CEO will review all three legs together.",
+      "Cash after fills: EUR 499.99. Equity marked at 08:15 CET is EUR 996.85 (−0.31%, from fees and spread). Gross exposure is 74.9%.",
+      "Total risk at stops: EUR 37.83 at entry (3.78%), within the CRO's 5% limit.",
+      "Exits: mechanical stops and targets, checked by mark.py. The equity stops are reviewed at each IC, and stops may be trailed up to 2.5×ATR but are never loosened.",
+      "Next IC: Mon 30 Nov (month-end rotation rebalance), or earlier if a stop or target is hit or BTC triggers."
+     ],
+     "ic": "2026-11-26",
+     "ic_title": "Apex Horizon Capital — Investment Committee #1",
+     "text": "- SOL 25% (EUR 250), CIO idea — VETO. The only defensible stop is below the 55-bar 4h low of 64.87, which is 8.4% below 70.85. On EUR 250 that's about EUR 21 plus fees, above the EUR 20 per-trade cap. It also has no validated signal (Kenji). Rejected.\n- EURUSD 2x, EUR 500 notional, Macro idea — CUT. It's within my risk caps: a stop 2.5×ATR away (1.66%) is about EUR 8.4. But Elena's 25% theme cap makes it EUR 250 at 1x. I also flag our USD stacking: SXR8 and AAPL are both USD assets, so with the short we're about 75% long USD in EUR terms. Marcus's own \"ignored scenario\", a dovish Fed and a weaker USD, would hit all three legs at once.\n- SXR8 25%: approved with a stop at 651.79, which is 2.5×ATR(14) = 2.5 × 16.08 below. Risk is EUR 16.82 including both fees, so 1.68% of equity.\n- AAPL 25%: approved with a stop at 304.46 EUR (2.5×ATR = 2.5 × 8.03 USD, converted at 1.0970). Risk is EUR 16.81, so 1.68%. Gap risk: AAPL can gap through the stop at the US open, so a 3% gap would add about EUR 7.\n- Portfolio: the total risk if every stop is hit is EUR 37.83 (3.78%), inside the 5% limit. Over the last year, the historical 99% one-day loss on these three positions is EUR 14.87, and the worst 5-day window was −EUR 28.25 (−2.8%). The daily correlation of SXR8 and APC.F is 0.34, which is understated because the trading hours don't line up; I treat the two as one equity bet.\n- Kill switch: at −15% (EUR 850 equity) everything is flattened. That's far away.\n\n---\n## 3. Synthesis and debate\n- Agreed: don't buy crypto now. There's no validated signal, and the SOL trade broke the per-trade cap. Rotation points to US equity in EUR, and AAPL is the cleanest relative-strength leader.\n- Conflict:\n  - Kenji's point that \"SXR8 momentum is partly USD\" against Marcus's \"USD trend\". Together they show that the whole book leans on a strong USD.\n  - Elena wanted 75% invested, including crypto. Sofia's ruling leaves about 50% cash.\n- Blind spots:\n  - The SXR8 entry comes 4 days before the formal month-end rebalance.\n  - Holiday liquidity means AAPL's EUR price isn't confirmed until the US reopens on Friday.\n  - The equity legs are likely correlated in a sell-off.\n- Resolution: keep the USD short at a small size (EUR 4.20 risk) as the explicit trend expression. If a dovish-Fed scenario appears (EURUSD back above its 50d at 1.1197), the CEO will review all three legs together.\n\n---\n## 4. CEO final decision\n| # | Action | Instrument | Qty | Fill | Size | Stop | Target | Risk at stop |\n|---|---|---|---|---|---|---|---|---|\n| 1 | BUY | SXR8.DE (EUR) | 0.3593 | 693.038 | EUR 250.01 incl. fee (25.0%) | 651.79 | 755.30 | EUR 16.82 |\n| 2 | BUY | Apple, APC.F (EUR) | 0.7692 | 323.7182 | EUR 250.00 incl. fee (25.0%) | 304.46 | 368.48 (2.5R) | EUR 16.81 |\n| 3 | SELL (short) | EURUSD CFD | EUR 250 notional, 1x | 1.09690 | EUR 250 notional (25.0%), margin EUR 8.33 | 1.11566 | 1.05938 (2R) | EUR 4.20 |\n| 4 | Conditional BUY (not filled) | BTC-EUR | up to EUR 250 | on a 4h close above 65,447 USDT | — | 2.5× 4h ATR | — | ≤ EUR 20 |\n| — | PASS / VETO | SOL (CRO+Quant), MDT (Quant), EURUSD 2x (CIO cap) | | | | | | |\n\n- Cash after fills: EUR 499.99. Equity marked at 08:15 CET is EUR 996.85 (−0.31%, from fees and spread). Gross exposure is 74.9%.\n- Total risk at stops: EUR 37.83 at entry (3.78%), within the CRO's 5% limit.\n- Exits: mechanical stops and targets, checked by mark.py. The equity stops are reviewed at each IC, and stops may be trailed up to 2.5×ATR but are never loosened.\n- Next IC: Mon 30 Nov (month-end rotation rebalance), or earlier if a stop or target is hit or BTC triggers.\n\nChairman: please give sign-off on the three trades, tell us whether the 25% theme cap should count *USD exposure* as one theme, and name the next sector to investigate. Our suggestion is Nordic energy/Equinor after Brent's −21% month.",
+     "time": "2026-11-26T08:10:00+01:00"
+    },
+    {
+     "bullets": [
+      "veto real adoption. 2 YM contracts on a $1k account is far beyond our 2% per-trade risk rule; a ~25pt stop on 2 YM is about $250, or 25% of the account. Simulated proof, hindsight examples, and an upsell to the inner circle are signal-seller red flags."
+     ],
+     "ic": "2026-11-26-video-review",
+     "ic_title": "IC: Review of \"Hybrid Super Scalping Strategy\" video (Alpha GOLD Trading / Jooviers Fkm), 2026-11-26",
+     "text": "veto real adoption. 2 YM contracts on a $1k account is far beyond our 2% per-trade risk rule; a ~25pt stop on 2 YM is about $250, or 25% of the account. Simulated proof, hindsight examples, and an upsell to the inner circle are signal-seller red flags.",
+     "time": "2026-11-26T08:38:00+01:00"
+    },
+    {
+     "bullets": [
+      "Total risk is 3.47%, leaving €15.27 of headroom. That's below one full €20 slot, so a new trade would need a smaller size anyway. Every position has a stop, per-trade risk is under €20 and the drawdown is 0.33%. The USD exemption is a board decision; I record it, but I keep my flag that all three positions lose together on a USD reversal. Approve HOLD."
+     ],
+     "ic": "2026-11-26-am",
+     "ic_title": "Apex Horizon Capital — Investment Committee #2 (AM session)",
+     "text": "Total risk is 3.47%, leaving €15.27 of headroom. That's below one full €20 slot, so a new trade would need a smaller size anyway. Every position has a stop, per-trade risk is under €20 and the drawdown is 0.33%. The USD exemption is a board decision; I record it, but I keep my flag that all three positions lose together on a USD reversal. Approve HOLD.",
+     "time": "2026-11-26T09:06:00+01:00"
+    }
+   ],
+   "key": "sofia",
+   "latest": {
+    "bullets": [
+     "Total risk is 3.47%, leaving €15.27 of headroom. That's below one full €20 slot, so a new trade would need a smaller size anyway. Every position has a stop, per-trade risk is under €20 and the drawdown is 0.33%. The USD exemption is a board decision; I record it, but I keep my flag that all three positions lose together on a USD reversal. Approve HOLD."
+    ],
+    "ic": "2026-11-26-am",
+    "ic_title": "Apex Horizon Capital — Investment Committee #2 (AM session)",
+    "text": "Total risk is 3.47%, leaving €15.27 of headroom. That's below one full €20 slot, so a new trade would need a smaller size anyway. Every position has a stop, per-trade risk is under €20 and the drawdown is 0.33%. The USD exemption is a board decision; I record it, but I keep my flag that all three positions lose together on a USD reversal. Approve HOLD.",
+    "time": "2026-11-26T09:06:00+01:00"
+   },
+   "name": "Sofia Brandt",
+   "role": "CRO",
+   "short": "Sofia"
+  },
+  {
+   "dept": "Venue, costs, tax",
+   "hdr": "Execution",
+   "history": [
+    {
+     "bullets": [
+      "PRIIPs: US-listed ETFs aren't available to EU/EEA retail, so the S&P exposure goes through SXR8 (UCITS, Acc, EUR, Xetra). That's fine.",
+      "AAPL: US cash markets are closed today, but the EUR line trades on Tradegate/Frankfurt from 08:00 to 22:00 CET. The reference price is APC.F 322.75 EUR (last trade 25 Nov 21:34 CET; US close 355.58 USD ÷ 1.0970 = 324.15 EUR). Holiday spreads are wider, so I model 30 bp slippage plus a EUR 1 fee. Fractional shares are fine (Trade Republic-type broker).",
+      "SXR8: reference 692.00 EUR (Xetra close 25 Nov 17:29). I model 15 bp slippage, because the spread before 09:00 is wider, plus a EUR 1 fee.",
+      "EURUSD: a CFD under the ESMA retail rules (30:1 max). Mid 1.09697, modelled spread 1.5 pips, no commission. Overnight financing on a short-EUR position is currently a small credit/debit depending on the broker; I'll track it.",
+      "Fees on small tickets: EUR 1 on EUR 250 is 0.4% each way, so round-trip costs are 0.8–1.4% per stock trade. Don't churn.",
+      "Norwegian tax notes:",
+      "Crypto venues: Kraken or Bitvavo at about 0.25%, if a breakout triggers."
+     ],
+     "ic": "2026-11-26",
+     "ic_title": "Apex Horizon Capital — Investment Committee #1",
+     "text": "- PRIIPs: US-listed ETFs aren't available to EU/EEA retail, so the S&P exposure goes through SXR8 (UCITS, Acc, EUR, Xetra). That's fine.\n- AAPL: US cash markets are closed today, but the EUR line trades on Tradegate/Frankfurt from 08:00 to 22:00 CET. The reference price is APC.F 322.75 EUR (last trade 25 Nov 21:34 CET; US close 355.58 USD ÷ 1.0970 = 324.15 EUR). Holiday spreads are wider, so I model 30 bp slippage plus a EUR 1 fee. Fractional shares are fine (Trade Republic-type broker).\n- SXR8: reference 692.00 EUR (Xetra close 25 Nov 17:29). I model 15 bp slippage, because the spread before 09:00 is wider, plus a EUR 1 fee.\n- EURUSD: a CFD under the ESMA retail rules (30:1 max). Mid 1.09697, modelled spread 1.5 pips, no commission. Overnight financing on a short-EUR position is currently a small credit/debit depending on the broker; I'll track it.\n- Fees on small tickets: EUR 1 on EUR 250 is 0.4% each way, so round-trip costs are 0.8–1.4% per stock trade. Don't churn.\n- Norwegian tax notes:\n  - Gains are taxed as ordinary income at 22%, then grossed up by 1.72, so about 37.84% effective.\n  - Losses are deductible.\n  - SXR8 holds more than 80% non-EEA stocks, so it doesn't qualify for an aksjesparekonto (ASK); nor does AAPL held at a foreign broker. Both are taxed at realisation.\n  - FX/CFD gains are ordinary capital income at 22%.\n  - Report in NOK at the transaction-date rate. EURNOK today is 10.757.\n- Crypto venues: Kraken or Bitvavo at about 0.25%, if a breakout triggers.",
+     "time": "2026-11-26T08:10:00+01:00"
+    },
+    {
+     "bullets": [
+      "on 1m, spread, commissions and slippage eat a 1:1 edge. We can't trade YM on a €1k paper book within the rules anyway."
+     ],
+     "ic": "2026-11-26-video-review",
+     "ic_title": "IC: Review of \"Hybrid Super Scalping Strategy\" video (Alpha GOLD Trading / Jooviers Fkm), 2026-11-26",
+     "text": "on 1m, spread, commissions and slippage eat a 1:1 edge. We can't trade YM on a €1k paper book within the rules anyway.",
+     "time": "2026-11-26T08:38:00+01:00"
+    },
+    {
+     "bullets": [
+      "Xetra has only just opened, so the SXR8 mark is still yesterday's close. The APC.F spread on Tradegate stays wide while the US is shut. Any trade today would pay that spread for no signal. No orders."
+     ],
+     "ic": "2026-11-26-am",
+     "ic_title": "Apex Horizon Capital — Investment Committee #2 (AM session)",
+     "text": "Xetra has only just opened, so the SXR8 mark is still yesterday's close. The APC.F spread on Tradegate stays wide while the US is shut. Any trade today would pay that spread for no signal. No orders.",
+     "time": "2026-11-26T09:06:00+01:00"
+    }
+   ],
+   "key": "tomas",
+   "latest": {
+    "bullets": [
+     "Xetra has only just opened, so the SXR8 mark is still yesterday's close. The APC.F spread on Tradegate stays wide while the US is shut. Any trade today would pay that spread for no signal. No orders."
+    ],
+    "ic": "2026-11-26-am",
+    "ic_title": "Apex Horizon Capital — Investment Committee #2 (AM session)",
+    "text": "Xetra has only just opened, so the SXR8 mark is still yesterday's close. The APC.F spread on Tradegate stays wide while the US is shut. Any trade today would pay that spread for no signal. No orders.",
+    "time": "2026-11-26T09:06:00+01:00"
+   },
+   "name": "Tomas Rask",
+   "role": "Execution",
+   "short": "Tomas"
+  }
+ ]
+}

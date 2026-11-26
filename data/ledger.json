@@ -1,0 +1,259 @@
+{
+ "ledger": {
+  "base_ccy": "EUR",
+  "cash": 499.99,
+  "equity_history": [
+   {
+    "equity": 1000.0,
+    "note": "inception",
+    "time": "2026-11-26T07:14:35.530156+00:00"
+   },
+   {
+    "drawdown_pct": -0.31,
+    "equity": 996.85,
+    "time": "2026-11-26T07:15:10.700649+00:00"
+   },
+   {
+    "drawdown_pct": -0.36,
+    "equity": 996.41,
+    "time": "2026-11-26T07:16:35.687603+00:00"
+   },
+   {
+    "drawdown_pct": -0.33,
+    "equity": 996.72,
+    "time": "2026-11-26T08:06:14.880121+00:00"
+   }
+  ],
+  "firm": "Apex Horizon Capital",
+  "fx": {
+   "EURUSD": 1.0969723463058472,
+   "time": "2026-11-26T07:13:00+00:00"
+  },
+  "inception": "2026-11-26T07:14:35.530156+00:00",
+  "limits": {
+   "crypto_cap_pct": 0.4,
+   "max_drawdown_kill_pct": 0.15,
+   "max_expected_portfolio_dd_pct": 0.05,
+   "max_leverage": 2.0,
+   "per_trade_risk_eur": 20.0,
+   "per_trade_risk_pct": 0.02,
+   "theme_cap_pct": 0.25
+  },
+  "mode": "PAPER",
+  "pending_orders": [
+   {
+    "created": "2026-11-26T07:14:35.530156+00:00",
+    "last_check": {
+     "last_closed_4h": 60521.78,
+     "time": "2026-11-26T08:06:14.880121+00:00"
+    },
+    "max_size_eur": 250,
+    "ref_price_at_creation": [
+     60462.01,
+     "2026-11-26T07:14:35.530156+00:00"
+    ],
+    "status": "armed",
+    "stop_rule": "2.5x 4h ATR below fill",
+    "symbol": "BTC-EUR",
+    "trigger_rule": "4h close above 55-bar Donchian high (crypto bot trend_breakout signal)",
+    "trigger_usdt": 65447.0,
+    "type": "buy-stop (conditional, NOT filled)"
+   }
+  ],
+  "positions": [
+   {
+    "asset_class": "UCITS ETF",
+    "cost_eur": 250.01,
+    "dist_to_stop_pct": 6.17,
+    "dist_to_target_pct": 9.15,
+    "entry_ccy": "EUR",
+    "entry_price": 693.038,
+    "entry_time": "2026-11-26T07:14:35.530156+00:00",
+    "fees_eur": 1.0,
+    "last_price": 692.0,
+    "last_price_time": "2026-11-25T17:29:00+01:00",
+    "market_value_eur": 248.64,
+    "name": "iShares Core S&P 500 UCITS ETF (Acc)",
+    "notional_eur": 249.01,
+    "open_risk_eur": 15.45,
+    "price_source": "SXR8.DE via yfinance",
+    "qty": 0.3593,
+    "rationale": "Dual-momentum rotation: only risk asset with positive 3/6/12m blend in EUR terms; stop 2.5xATR below.",
+    "ref_price": 692.0,
+    "ref_price_time": "2026-11-25T17:29:00+01:00",
+    "risk_at_stop_eur": 16.82,
+    "risk_note": "includes EUR 1 entry + EUR 1 exit fee",
+    "side": "long",
+    "slippage_bps": 15.0,
+    "stop": 651.79,
+    "symbol": "SXR8.DE",
+    "target": 755.3,
+    "theme": "US equity beta",
+    "unrealized_pnl_eur": -0.37,
+    "venue": "Xetra/Tradegate (Trade Republic-type broker, EUR 1/order)"
+   },
+   {
+    "asset_class": "Single stock",
+    "cost_eur": 250.0,
+    "dist_to_stop_pct": 6.07,
+    "dist_to_target_pct": 14.1,
+    "entry_ccy": "EUR",
+    "entry_price": 323.7182,
+    "entry_time": "2026-11-26T07:14:35.530156+00:00",
+    "fees_eur": 1.0,
+    "last_price": 322.95001220703125,
+    "last_price_time": "2026-11-26T08:32:00+01:00",
+    "market_value_eur": 248.41,
+    "name": "Apple Inc. (EUR line, Frankfurt/Tradegate)",
+    "notional_eur": 249.0,
+    "open_risk_eur": 15.22,
+    "price_source": "APC.F via yfinance",
+    "qty": 0.7692,
+    "rationale": "Relative-strength leader: 0.2% off 52w high, above 50/200d, +29% 12m while S&P is -7% 1m.",
+    "ref_price": 322.75,
+    "ref_price_time": "2026-11-25T21:34:00+01:00",
+    "risk_at_stop_eur": 16.81,
+    "risk_note": "includes EUR 1 entry + EUR 1 exit fee",
+    "side": "long",
+    "slippage_bps": 30.0,
+    "stop": 304.46,
+    "symbol": "APC.F",
+    "target": 368.48,
+    "theme": "Mega-cap quality momentum",
+    "unrealized_pnl_eur": -0.59,
+    "venue": "Tradegate/Frankfurt in EUR (US market closed: holiday spread)"
+   },
+   {
+    "asset_class": "FX",
+    "cost_eur": 0.0,
+    "dist_to_stop_pct": 1.56,
+    "dist_to_target_pct": 3.54,
+    "entry_ccy": "USD per EUR",
+    "entry_price": 1.0969,
+    "entry_time": "2026-11-26T07:14:35.530156+00:00",
+    "fees_eur": 0.0,
+    "last_price": 1.0982975959777832,
+    "last_price_time": "2026-11-26T08:05:00+00:00",
+    "margin_eur": 8.33,
+    "market_value_eur": 0.0,
+    "name": "EUR/USD CFD (short EUR, long USD)",
+    "notional_eur": 250.0,
+    "open_risk_eur": 3.89,
+    "price_source": "EURUSD=X via yfinance",
+    "qty": 250.0,
+    "qty_unit": "EUR notional",
+    "rationale": "Trend: EURUSD below 50d/200d, -5.4% 3m, DXY +4.1% 3m; stop 2.5xATR above, target 5xATR (2R).",
+    "ref_price": 1.0969723463058472,
+    "ref_price_time": "2026-11-26T07:13:00+00:00",
+    "risk_at_stop_eur": 4.2,
+    "side": "short",
+    "slippage_bps": 0.68,
+    "spread_cost_eur": 0.0171,
+    "stop": 1.11566,
+    "symbol": "EURUSD",
+    "target": 1.05938,
+    "theme": "USD trend",
+    "unrealized_pnl_eur": -0.32,
+    "venue": "FX CFD broker (ESMA retail: 30:1 max, used at 1x notional)"
+   }
+  ],
+  "quotes_used": {
+   "APC.F": {
+    "price": 322.75,
+    "time": "2026-11-25T21:34:00+01:00"
+   },
+   "BTC-EUR(coinbase)": {
+    "price": 55057.13,
+    "time": "2026-11-26T07:14:31.839264766Z"
+   },
+   "BTCUSDT(binance)": {
+    "price": 60462.01,
+    "time": "2026-11-26T07:14:35.530156+00:00"
+   },
+   "EURUSD=X": {
+    "price": 1.0969723463058472,
+    "time": "2026-11-26T07:13:00+00:00"
+   },
+   "SXR8.DE": {
+    "price": 692.0,
+    "time": "2026-11-25T17:29:00+01:00"
+   }
+  },
+  "starting_capital": 1000.0,
+  "trade_history": [
+   {
+    "action": "BUY",
+    "cash_after": 749.99,
+    "fees_eur": 1.0,
+    "note": "Dual-momentum rotation: only risk asset with positive 3/6/12m blend in EUR terms; stop 2.5xATR below.",
+    "price": 693.038,
+    "qty": 0.3593,
+    "symbol": "SXR8.DE",
+    "time": "2026-11-26T07:14:35.530156+00:00",
+    "value_eur": 249.01
+   },
+   {
+    "action": "BUY",
+    "cash_after": 499.99,
+    "fees_eur": 1.0,
+    "note": "Relative-strength leader: 0.2% off 52w high, above 50/200d, +29% 12m while S&P is -7% 1m.",
+    "price": 323.7182,
+    "qty": 0.7692,
+    "symbol": "APC.F",
+    "time": "2026-11-26T07:14:35.530156+00:00",
+    "value_eur": 249.0
+   },
+   {
+    "action": "SELL SHORT",
+    "cash_after": 499.99,
+    "fees_eur": 0.0,
+    "note": "Trend: EURUSD below 50d/200d, -5.4% 3m, DXY +4.1% 3m; stop 2.5xATR above, target 5xATR (2R).",
+    "price": 1.0969,
+    "qty": 250.0,
+    "symbol": "EURUSD",
+    "time": "2026-11-26T07:14:35.530156+00:00",
+    "value_eur": 250.0
+   }
+  ],
+  "vetoed": [
+   {
+    "by": [
+     "CRO Sofia Brandt",
+     "Quant Dr. Kenji Mori"
+    ],
+    "idea": "SOL-EUR mean-reversion long, 25% (EUR 250)",
+    "reason": "Stop below 55-bar 4h low gives EUR ~21 risk > EUR 20 cap; mean-reversion lost money in- and out-of-sample in the crypto bot backtests"
+   },
+   {
+    "by": [
+     "Quant Dr. Kenji Mori"
+    ],
+    "idea": "MDT RSI(2) swing long",
+    "reason": "Swing sleeve showed ~no out-of-sample edge (2017-2026); signal not validated"
+   },
+   {
+    "by": [
+     "CIO Elena Varga"
+    ],
+    "idea": "EURUSD short at 2x (EUR 500 notional)",
+    "reason": "Would put the USD-trend theme at 50% of equity, above the 25% theme cap; cut to EUR 250 at 1x"
+   }
+  ]
+ },
+ "meta": {
+  "as_of": "2026-11-26T08:06:14.880121+00:00",
+  "ceo": "Grok Bot 'Game Developer'",
+  "chairman": "Karli",
+  "generated_from": "/workspace/apex-horizon",
+  "rules": {
+   "crypto_cap_pct": 40.0,
+   "kill_switch_dd_pct": 15.0,
+   "max_leverage": 2.0,
+   "per_position_cap_pct": 25.0,
+   "per_trade_risk_eur": 20.0,
+   "per_trade_risk_pct": 2.0,
+   "total_stop_risk_pct": 5.0,
+   "usd_concentration": "accepted by the Chairman"
+  }
+ }
+}

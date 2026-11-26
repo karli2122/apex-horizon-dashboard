@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0e17">
+<title>Apex Horizon Capital · Live Dashboard</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.18/index.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M4 26 L16 6 L28 26 Z' fill='%2322d3a6'/></svg>">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <svg viewBox="0 0 32 32" class="logo"><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#22d3a6"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs><path d="M3 27 L16 5 L29 27 Z" fill="none" stroke="url(#lg)" stroke-width="3" stroke-linejoin="round"/><path d="M9 27 L16 15 L23 27" fill="none" stroke="url(#lg)" stroke-width="2.4" stroke-linejoin="round"/></svg>
+    <div><h1>Apex Horizon Capital</h1><div class="sub">Paper fund · base EUR · <span id="hdr-mode" class="pill warn">PAPER</span></div></div>
+  </div>
+  <nav class="tabs" id="tabs">
+    <a href="#overview" class="active">Overview</a><a href="#positions">Positions</a><a href="#risk">Risk</a><a href="#ic">Committee</a><a href="#team">Team</a><a href="#research">Research</a><a href="#log">Trade log</a>
+  </nav>
+  <div class="status">
+    <div><span class="dot" id="live-dot"></span><span id="live-label">Connecting…</span></div>
+    <div class="muted small">Updated <b id="last-upd">—</b> <span class="tz">CET</span> · next in <span id="next-in">—</span>s
+      <button id="refresh" class="btn" title="Refresh prices now">↻</button></div>
+  </div>
+</header>
+
+<main>
+  <section id="overview" class="anchor">
+    <div class="kpis" id="kpis"></div>
+    <div class="grid g-2-1">
+      <div class="card">
+        <div class="card-h"><h2>Equity curve</h2><span class="muted small" id="eq-note"></span></div>
+        <div class="chart-wrap tall"><canvas id="equityChart"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-h"><h2>Allocation</h2><span class="muted small">notional, live</span></div>
+        <div class="chart-wrap"><canvas id="allocChart"></canvas></div>
+        <div id="alloc-legend" class="legend"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-h"><h2>Market tape</h2><span class="muted small">free public APIs, every 30 s · source and print time per price</span></div>
+      <div class="tape" id="tape"></div>
+    </div>
+  </section>
+
+  <section id="positions" class="anchor">
+    <div class="card">
+      <div class="card-h"><h2>Open positions</h2><span class="muted small" id="pos-note"></span></div>
+      <div id="positions-table"></div>
+    </div>
+    <div class="card">
+      <div class="card-h"><h2>Pending conditional orders</h2><span class="muted small">never auto-filled; a trigger goes to the IC</span></div>
+      <div id="pending"></div>
+    </div>
+  </section>
+
+  <section id="risk" class="anchor">
+    <div class="card">
+      <div class="card-h"><h2>Risk dashboard</h2><span class="muted small">CRO Sofia Brandt · hard limits, live</span></div>
+      <div class="gauges" id="gauges"></div>
+      <div id="risk-notes" class="risk-notes"></div>
+    </div>
+  </section>
+
+  <section id="ic" class="anchor">
+    <div class="grid g-2-1">
+      <div class="card">
+        <div class="card-h"><h2>Investment Committee timeline</h2><span class="muted small">decisions, trades, rulings, research</span></div>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+      <div class="card">
+        <div class="card-h"><h2>Board rulings</h2><span class="muted small">Chairman Karli</span></div>
+        <div id="rulings"></div>
+        <div class="card-h mt"><h2>Vetoed ideas</h2></div>
+        <div id="vetoes"></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-h"><h2>IC minutes</h2><span class="muted small">full text from ic/*.md</span></div>
+      <div id="minutes"></div>
+    </div>
+  </section>
+
+  <section id="team" class="anchor">
+    <div class="card-h solo"><h2>Leadership &amp; committee</h2><span class="muted small">latest recorded view of each member</span></div>
+    <div class="team" id="teamcards"></div>
+  </section>
+
+  <section id="research" class="anchor">
+    <div class="card" id="research-card"></div>
+  </section>
+
+  <section id="log" class="anchor">
+    <div class="card">
+      <div class="card-h"><h2>Trade log</h2><span class="muted small">from ledger.json trade_history</span></div>
+      <div id="tradelog"></div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div>Simulated paper-money fund. No real orders or accounts. Every figure comes from the firm's ledger and committee files, or from the live public APIs named next to it.</div>
+    <div class="muted small" id="foot-meta"></div>
+  </footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
