@@ -32,6 +32,16 @@
     "drawdown_pct": 0.0,
     "equity": 1006.75,
     "time": "2026-11-27T08:02:04.335896+00:00"
+   },
+   {
+    "drawdown_pct": 0.0,
+    "equity": 1008.21,
+    "time": "2026-11-27T15:03:57.771300+00:00"
+   },
+   {
+    "drawdown_pct": 0.0,
+    "equity": 1010.33,
+    "time": "2026-11-28T11:20:45.486661+00:00"
    }
   ],
   "firm": "Apex Horizon Capital",
@@ -54,8 +64,8 @@
    {
     "created": "2026-11-26T07:14:35.530156+00:00",
     "last_check": {
-     "last_closed_4h": 61673.45,
-     "time": "2026-11-27T08:02:04.335896+00:00"
+     "last_closed_4h": 59832.0,
+     "time": "2026-11-28T11:20:45.486661+00:00"
     },
     "max_size_eur": 250,
     "ref_price_at_creation": [
@@ -74,18 +84,18 @@
    {
     "asset_class": "UCITS ETF",
     "cost_eur": 250.01,
-    "dist_to_stop_pct": 9.26,
-    "dist_to_target_pct": 6.06,
+    "dist_to_stop_pct": 10.15,
+    "dist_to_target_pct": 5.2,
     "entry_ccy": "EUR",
     "entry_price": 693.038,
     "entry_time": "2026-11-26T07:14:35.530156+00:00",
     "fees_eur": 1.0,
-    "last_price": 712.1199951171875,
-    "last_price_time": "2026-11-26T17:29:00+01:00",
-    "market_value_eur": 255.86,
+    "last_price": 717.9400024414062,
+    "last_price_time": "2026-11-27T17:29:00+01:00",
+    "market_value_eur": 257.96,
     "name": "iShares Core S&P 500 UCITS ETF (Acc)",
     "notional_eur": 249.01,
-    "open_risk_eur": 22.68,
+    "open_risk_eur": 24.77,
     "price_source": "SXR8.DE via yfinance",
     "qty": 0.3593,
     "rationale": "Dual-momentum rotation: only risk asset with positive 3/6/12m blend in EUR terms; stop 2.5xATR below.",
@@ -99,24 +109,24 @@
     "symbol": "SXR8.DE",
     "target": 755.3,
     "theme": "US equity beta",
-    "unrealized_pnl_eur": 6.86,
+    "unrealized_pnl_eur": 8.95,
     "venue": "Xetra/Tradegate (Trade Republic-type broker, EUR 1/order)"
    },
    {
     "asset_class": "Single stock",
     "cost_eur": 250.0,
-    "dist_to_stop_pct": 7.22,
-    "dist_to_target_pct": 12.87,
+    "dist_to_stop_pct": 7.47,
+    "dist_to_target_pct": 12.62,
     "entry_ccy": "EUR",
     "entry_price": 323.7182,
     "entry_time": "2026-11-26T07:14:35.530156+00:00",
     "fees_eur": 1.0,
-    "last_price": 326.45001220703125,
-    "last_price_time": "2026-11-27T08:36:00+01:00",
-    "market_value_eur": 251.11,
+    "last_price": 327.20001220703125,
+    "last_price_time": "2026-11-27T18:40:00+01:00",
+    "market_value_eur": 251.68,
     "name": "Apple Inc. (EUR line, Frankfurt/Tradegate)",
     "notional_eur": 249.0,
-    "open_risk_eur": 17.91,
+    "open_risk_eur": 18.49,
     "price_source": "APC.F via yfinance",
     "qty": 0.7692,
     "rationale": "Relative-strength leader: 0.2% off 52w high, above 50/200d, +29% 12m while S&P is -7% 1m.",
@@ -130,25 +140,25 @@
     "symbol": "APC.F",
     "target": 368.48,
     "theme": "Mega-cap quality momentum",
-    "unrealized_pnl_eur": 2.1,
+    "unrealized_pnl_eur": 2.68,
     "venue": "Tradegate/Frankfurt in EUR (US market closed: holiday spread)"
    },
    {
     "asset_class": "FX",
     "cost_eur": 0.0,
-    "dist_to_stop_pct": 1.6,
-    "dist_to_target_pct": 3.5,
+    "dist_to_stop_pct": 1.95,
+    "dist_to_target_pct": 3.15,
     "entry_ccy": "USD per EUR",
     "entry_price": 1.0969,
     "entry_time": "2026-11-26T07:14:35.530156+00:00",
     "fees_eur": 0.0,
-    "last_price": 1.0978153944015503,
-    "last_price_time": "2026-11-27T08:01:00+00:00",
+    "last_price": 1.0938525199890137,
+    "last_price_time": "2026-11-27T22:29:00+00:00",
     "margin_eur": 8.33,
     "market_value_eur": 0.0,
     "name": "EUR/USD CFD (short EUR, long USD)",
     "notional_eur": 250.0,
-    "open_risk_eur": 4.0,
+    "open_risk_eur": 4.89,
     "price_source": "EURUSD=X via yfinance",
     "qty": 250.0,
     "qty_unit": "EUR notional",
@@ -163,7 +173,7 @@
     "symbol": "EURUSD",
     "target": 1.05938,
     "theme": "USD trend",
-    "unrealized_pnl_eur": -0.21,
+    "unrealized_pnl_eur": 0.7,
     "venue": "FX CFD broker (ESMA retail: 30:1 max, used at 1x notional)"
    }
   ],
@@ -251,7 +261,7 @@
   ]
  },
  "meta": {
-  "as_of": "2026-11-27T08:02:04.335896+00:00",
+  "as_of": "2026-11-28T11:20:45.486661+00:00",
   "ceo": "Grok Bot 'Game Developer'",
   "chairman": "Karli",
   "generated_from": "/workspace/apex-horizon",

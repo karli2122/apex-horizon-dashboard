@@ -366,10 +366,54 @@
      "text": "Xetra has just opened, so SXR8 is still marked at yesterday's close. That's a real print, but it's 15.5h old. APC.F is a Tradegate pre-market quote with a wide spread. Any trim would cost €1 plus 15–30 bp. Cash stays parked. No orders, and the US half-day is a poor time to execute anyway."
     }
    }
+  },
+  {
+   "chairman": null,
+   "decision": "HOLD. No trades, no stop changes. BTC breakout order stays armed at 65,447. SXR8/AAPL cap drift to the 30 Nov rotation. CRO watches the 5% line (€4.37 headroom).",
+   "decision_table": null,
+   "file": "ic/2026-11-27-pm.md",
+   "id": "2026-11-27-pm",
+   "kind": "ic",
+   "markdown": "# Apex Horizon Capital — Investment Committee #5 (PM session)\n**Date:** Fri 27 Nov 2026, 16:04 CET (Oslo) · **Mode:** PAPER · **Session:** pm\n**Present:** CEO; CIO Elena Varga; Quant Dr. Kenji Mori; Macro Marcus Lindqvist; Execution Tomas Rask; CRO Sofia Brandt (speaks last)\n**Board rulings in force:** USD exposure is exempt from the CIO 25% theme cap; the per-position 25% cap, 2% per-trade risk, 5% total stop risk and 15% kill-switch still apply (08:20). The 'Hybrid Super Scalping' video is research-only (08:38). Hull Suite / AlphaTrend / Pivot Point SuperTrend are not adopted, research backtest only (10:07).\n\n## 1. Mark (mark.py, 15:03:57 UTC = 16:03 CET)\n| Symbol | Last | Price time (CET) | UPL € | To stop | To target | Open risk € |\n|---|---|---|---|---|---|---|\n| SXR8.DE long 0.3593 | €712.30 | 27 Nov 15:47 (Xetra) | +6.92 | 9.28% | 6.04% | 22.74 |\n| APC.F long 0.7692 | €327.40 | 27 Nov 15:17 (Frankfurt) | +2.83 | 7.53% | 12.55% | 18.65 |\n| EURUSD short €250 | 1.09493 | 27 Nov 16:03 | +0.45 | 1.86% | 3.25% | 4.65 |\n\n- Cash €499.99 · **Equity €1,008.21** · Total P&L **+€8.21 (+0.82%)** · Day P&L +€3.18 · Gross €757.77 (75.2%) · Risk at stops €46.04 (4.57%, limit 5%) · Drawdown 0.00% (new equity high; kill −15% = €856.98).\n- **No stops or targets hit.**\n- **BTC conditional buy:** last closed 4h bar (closed 13:00 CET) 61,662.57 USDT vs trigger 65,447 → **not triggered** (6.1% below). BTCUSDT bid 59,062.53 at 16:04 CET (−4.2% in the open bar). Rolling 55-bar Donchian high 64,952.92. BTC-EUR (Coinbase) bid €53,883.19 at 16:04 CET. Stays armed.\n- Other live prints (16:03–16:04 CET): ETHUSDT 1,644.52 · EURNOK 10.7167 · US AAPL $356.68 (16:04 CET, US half-day) · VIX 26.98 (15:49 CET).\n\n## 2. Department views\n**CIO — Elena Varga:** Both equity legs edged up and the USD leg turned positive. SXR8 sits at 25.4%, AAPL 25.0%, EURUSD 24.8% notional: all on the per-position cap. No new validated idea; cash stays cash. SXR8 drift remains for the 30 Nov rotation.\n\n**Quant — Dr. Kenji Mori:** No signal changed. BTC moved away from the breakout, not toward it; spot is ~10% below the trigger, so the re-peg (within 2%) is moot. ADX regime still range. I'd object to buying this crypto dip — it's mean-reversion, not validated out of sample.\n\n**Macro — Marcus Lindqvist:** Crypto sold off hard intraday (BTC −4%, ETH −5%), NOK weakened (EURNOK 10.72), EURUSD drifted lower to 1.0949: USD-strength regime intact. VIX ~27 remains elevated. Bull 30% (month-end flows lift US equities), base 47% (range into 30 Nov), bear 23% (thin post-holiday liquidity, risk-off spills from crypto into equities). No trade request.\n\n**Execution — Tomas Rask:** All prints fresh this session. Any action costs €1 + 15–30 bp; US half-day close is poor liquidity. No orders.\n\n**CRO — Sofia Brandt (last):** Risk at stops €46.04 (4.57%); allowance €50.41, headroom €4.37 — no new trade fits. Every position has a stop, drawdown zero, kill switch 15% away. Headroom is shrinking only from gains; as minuted, if total risk crosses 5% I will require a rule-based trim or validated ATR trail at that IC. **Approve HOLD.**\n\n## 3. Decision\n**HOLD.** No trades, no stop changes. BTC breakout order stays armed at 65,447. SXR8/AAPL cap drift to the 30 Nov rotation. CRO watches the 5% line (€4.37 headroom).\n\n## 4. Ops\n- Ledger updated by mark.py at 16:03 CET. Dashboard Page refreshed.\n- Dashboard publish 16:04 CET: **FAILED** (exit 2, GITHUB_VICE_HORIZON_TOKEN not set in this run's environment). site/data rebuilt locally; GitHub site not updated. Third failure in a row; the Chairman was already notified at the AM session.\n",
+   "seq": 7,
+   "time": "2026-11-27T16:04:00+01:00",
+   "title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
+   "views": {
+    "elena": {
+     "bullets": [
+      "Both equity legs edged up and the USD leg turned positive. SXR8 sits at 25.4%, AAPL 25.0%, EURUSD 24.8% notional: all on the per-position cap. No new validated idea; cash stays cash. SXR8 drift remains for the 30 Nov rotation."
+     ],
+     "text": "Both equity legs edged up and the USD leg turned positive. SXR8 sits at 25.4%, AAPL 25.0%, EURUSD 24.8% notional: all on the per-position cap. No new validated idea; cash stays cash. SXR8 drift remains for the 30 Nov rotation."
+    },
+    "kenji": {
+     "bullets": [
+      "No signal changed. BTC moved away from the breakout, not toward it; spot is ~10% below the trigger, so the re-peg (within 2%) is moot. ADX regime still range. I'd object to buying this crypto dip — it's mean-reversion, not validated out of sample."
+     ],
+     "text": "No signal changed. BTC moved away from the breakout, not toward it; spot is ~10% below the trigger, so the re-peg (within 2%) is moot. ADX regime still range. I'd object to buying this crypto dip — it's mean-reversion, not validated out of sample."
+    },
+    "marcus": {
+     "bullets": [
+      "Crypto sold off hard intraday (BTC −4%, ETH −5%), NOK weakened (EURNOK 10.72), EURUSD drifted lower to 1.0949: USD-strength regime intact. VIX ~27 remains elevated. Bull 30% (month-end flows lift US equities), base 47% (range into 30 Nov), bear 23% (thin post-holiday liquidity, risk-off spills from crypto into equities). No trade request."
+     ],
+     "text": "Crypto sold off hard intraday (BTC −4%, ETH −5%), NOK weakened (EURNOK 10.72), EURUSD drifted lower to 1.0949: USD-strength regime intact. VIX ~27 remains elevated. Bull 30% (month-end flows lift US equities), base 47% (range into 30 Nov), bear 23% (thin post-holiday liquidity, risk-off spills from crypto into equities). No trade request."
+    },
+    "sofia": {
+     "bullets": [
+      "Risk at stops €46.04 (4.57%); allowance €50.41, headroom €4.37 — no new trade fits. Every position has a stop, drawdown zero, kill switch 15% away. Headroom is shrinking only from gains; as minuted, if total risk crosses 5% I will require a rule-based trim or validated ATR trail at that IC. Approve HOLD."
+     ],
+     "text": "Risk at stops €46.04 (4.57%); allowance €50.41, headroom €4.37 — no new trade fits. Every position has a stop, drawdown zero, kill switch 15% away. Headroom is shrinking only from gains; as minuted, if total risk crosses 5% I will require a rule-based trim or validated ATR trail at that IC. Approve HOLD."
+    },
+    "tomas": {
+     "bullets": [
+      "All prints fresh this session. Any action costs €1 + 15–30 bp; US half-day close is poor liquidity. No orders."
+     ],
+     "text": "All prints fresh this session. Any action costs €1 + 15–30 bp; US half-day close is poor liquidity. No orders."
+    }
+   }
   }
  ],
  "meta": {
-  "as_of": "2026-11-27T08:02:04.335896+00:00",
+  "as_of": "2026-11-28T11:20:45.486661+00:00",
   "ceo": "Grok Bot 'Game Developer'",
   "chairman": "Karli",
   "generated_from": "/workspace/apex-horizon",
@@ -817,17 +861,26 @@
      "ic_title": "Apex Horizon Capital — Investment Committee #4 (AM session)",
      "text": "APC.F's pre-market bid lifted the book to a new high. SXR8 is at 25.4% and AAPL at 24.9%, so both sit right on the per-position cap. EURUSD is at 24.8% notional. I still want the SXR8 rebalance done at the 30 Nov rotation, not today. Half the fund is in cash and I have no new validated idea. I won't pitch something just to put the money to work.",
      "time": "2026-11-27T09:03:00+01:00"
+    },
+    {
+     "bullets": [
+      "Both equity legs edged up and the USD leg turned positive. SXR8 sits at 25.4%, AAPL 25.0%, EURUSD 24.8% notional: all on the per-position cap. No new validated idea; cash stays cash. SXR8 drift remains for the 30 Nov rotation."
+     ],
+     "ic": "2026-11-27-pm",
+     "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
+     "text": "Both equity legs edged up and the USD leg turned positive. SXR8 sits at 25.4%, AAPL 25.0%, EURUSD 24.8% notional: all on the per-position cap. No new validated idea; cash stays cash. SXR8 drift remains for the 30 Nov rotation.",
+     "time": "2026-11-27T16:04:00+01:00"
     }
    ],
    "key": "elena",
    "latest": {
     "bullets": [
-     "APC.F's pre-market bid lifted the book to a new high. SXR8 is at 25.4% and AAPL at 24.9%, so both sit right on the per-position cap. EURUSD is at 24.8% notional. I still want the SXR8 rebalance done at the 30 Nov rotation, not today. Half the fund is in cash and I have no new validated idea. I won't pitch something just to put the money to work."
+     "Both equity legs edged up and the USD leg turned positive. SXR8 sits at 25.4%, AAPL 25.0%, EURUSD 24.8% notional: all on the per-position cap. No new validated idea; cash stays cash. SXR8 drift remains for the 30 Nov rotation."
     ],
-    "ic": "2026-11-27-am",
-    "ic_title": "Apex Horizon Capital — Investment Committee #4 (AM session)",
-    "text": "APC.F's pre-market bid lifted the book to a new high. SXR8 is at 25.4% and AAPL at 24.9%, so both sit right on the per-position cap. EURUSD is at 24.8% notional. I still want the SXR8 rebalance done at the 30 Nov rotation, not today. Half the fund is in cash and I have no new validated idea. I won't pitch something just to put the money to work.",
-    "time": "2026-11-27T09:03:00+01:00"
+    "ic": "2026-11-27-pm",
+    "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
+    "text": "Both equity legs edged up and the USD leg turned positive. SXR8 sits at 25.4%, AAPL 25.0%, EURUSD 24.8% notional: all on the per-position cap. No new validated idea; cash stays cash. SXR8 drift remains for the 30 Nov rotation.",
+    "time": "2026-11-27T16:04:00+01:00"
    },
    "name": "Elena Varga",
    "role": "CIO",
@@ -894,17 +947,26 @@
      "ic_title": "Apex Horizon Capital — Investment Committee #4 (AM session)",
      "text": "No validated signal changed. On BTC, the rule is \"4h close above the 55-bar high\", and that high has rolled down to 64,952.92. The armed order still says 65,447. The gap is 0.8%, and either level is still more than 5% away, so it doesn't matter today. I'd like the order re-pegged to the rolling rule level at the next session where it's within 2%. ADX 15 is still a range. Same objection as yesterday: no discretionary adds and no ad hoc stop moves.",
      "time": "2026-11-27T09:03:00+01:00"
+    },
+    {
+     "bullets": [
+      "No signal changed. BTC moved away from the breakout, not toward it; spot is ~10% below the trigger, so the re-peg (within 2%) is moot. ADX regime still range. I'd object to buying this crypto dip — it's mean-reversion, not validated out of sample."
+     ],
+     "ic": "2026-11-27-pm",
+     "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
+     "text": "No signal changed. BTC moved away from the breakout, not toward it; spot is ~10% below the trigger, so the re-peg (within 2%) is moot. ADX regime still range. I'd object to buying this crypto dip — it's mean-reversion, not validated out of sample.",
+     "time": "2026-11-27T16:04:00+01:00"
     }
    ],
    "key": "kenji",
    "latest": {
     "bullets": [
-     "No validated signal changed. On BTC, the rule is \"4h close above the 55-bar high\", and that high has rolled down to 64,952.92. The armed order still says 65,447. The gap is 0.8%, and either level is still more than 5% away, so it doesn't matter today. I'd like the order re-pegged to the rolling rule level at the next session where it's within 2%. ADX 15 is still a range. Same objection as yesterday: no discretionary adds and no ad hoc stop moves."
+     "No signal changed. BTC moved away from the breakout, not toward it; spot is ~10% below the trigger, so the re-peg (within 2%) is moot. ADX regime still range. I'd object to buying this crypto dip — it's mean-reversion, not validated out of sample."
     ],
-    "ic": "2026-11-27-am",
-    "ic_title": "Apex Horizon Capital — Investment Committee #4 (AM session)",
-    "text": "No validated signal changed. On BTC, the rule is \"4h close above the 55-bar high\", and that high has rolled down to 64,952.92. The armed order still says 65,447. The gap is 0.8%, and either level is still more than 5% away, so it doesn't matter today. I'd like the order re-pegged to the rolling rule level at the next session where it's within 2%. ADX 15 is still a range. Same objection as yesterday: no discretionary adds and no ad hoc stop moves.",
-    "time": "2026-11-27T09:03:00+01:00"
+    "ic": "2026-11-27-pm",
+    "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
+    "text": "No signal changed. BTC moved away from the breakout, not toward it; spot is ~10% below the trigger, so the re-peg (within 2%) is moot. ADX regime still range. I'd object to buying this crypto dip — it's mean-reversion, not validated out of sample.",
+    "time": "2026-11-27T16:04:00+01:00"
    },
    "name": "Dr. Kenji Mori",
    "role": "Quant",
@@ -972,17 +1034,26 @@
      "ic_title": "Apex Horizon Capital — Investment Committee #4 (AM session)",
      "text": "Overnight, crypto bounced about 2% and EURNOK fell to 10.66, so NOK firmed. EURUSD is close to flat (1.0978), so the strong-USD regime holds but isn't extending. Today's US session is a thin half-day after Thanksgiving. Bull 33% (risk-on relief carries into month-end and AAPL breaks to new highs), base 45% (range into the 30 Nov rotation), bear 22% (thin-liquidity US gap down, AAPL gives back pre-market gains, and a USD squeeze reverses on month-end flows and hits our EURUSD short from the stop side). I'm not asking for a trade.",
      "time": "2026-11-27T09:03:00+01:00"
+    },
+    {
+     "bullets": [
+      "Crypto sold off hard intraday (BTC −4%, ETH −5%), NOK weakened (EURNOK 10.72), EURUSD drifted lower to 1.0949: USD-strength regime intact. VIX ~27 remains elevated. Bull 30% (month-end flows lift US equities), base 47% (range into 30 Nov), bear 23% (thin post-holiday liquidity, risk-off spills from crypto into equities). No trade request."
+     ],
+     "ic": "2026-11-27-pm",
+     "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
+     "text": "Crypto sold off hard intraday (BTC −4%, ETH −5%), NOK weakened (EURNOK 10.72), EURUSD drifted lower to 1.0949: USD-strength regime intact. VIX ~27 remains elevated. Bull 30% (month-end flows lift US equities), base 47% (range into 30 Nov), bear 23% (thin post-holiday liquidity, risk-off spills from crypto into equities). No trade request.",
+     "time": "2026-11-27T16:04:00+01:00"
     }
    ],
    "key": "marcus",
    "latest": {
     "bullets": [
-     "Overnight, crypto bounced about 2% and EURNOK fell to 10.66, so NOK firmed. EURUSD is close to flat (1.0978), so the strong-USD regime holds but isn't extending. Today's US session is a thin half-day after Thanksgiving. Bull 33% (risk-on relief carries into month-end and AAPL breaks to new highs), base 45% (range into the 30 Nov rotation), bear 22% (thin-liquidity US gap down, AAPL gives back pre-market gains, and a USD squeeze reverses on month-end flows and hits our EURUSD short from the stop side). I'm not asking for a trade."
+     "Crypto sold off hard intraday (BTC −4%, ETH −5%), NOK weakened (EURNOK 10.72), EURUSD drifted lower to 1.0949: USD-strength regime intact. VIX ~27 remains elevated. Bull 30% (month-end flows lift US equities), base 47% (range into 30 Nov), bear 23% (thin post-holiday liquidity, risk-off spills from crypto into equities). No trade request."
     ],
-    "ic": "2026-11-27-am",
-    "ic_title": "Apex Horizon Capital — Investment Committee #4 (AM session)",
-    "text": "Overnight, crypto bounced about 2% and EURNOK fell to 10.66, so NOK firmed. EURUSD is close to flat (1.0978), so the strong-USD regime holds but isn't extending. Today's US session is a thin half-day after Thanksgiving. Bull 33% (risk-on relief carries into month-end and AAPL breaks to new highs), base 45% (range into the 30 Nov rotation), bear 22% (thin-liquidity US gap down, AAPL gives back pre-market gains, and a USD squeeze reverses on month-end flows and hits our EURUSD short from the stop side). I'm not asking for a trade.",
-    "time": "2026-11-27T09:03:00+01:00"
+    "ic": "2026-11-27-pm",
+    "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
+    "text": "Crypto sold off hard intraday (BTC −4%, ETH −5%), NOK weakened (EURNOK 10.72), EURUSD drifted lower to 1.0949: USD-strength regime intact. VIX ~27 remains elevated. Bull 30% (month-end flows lift US equities), base 47% (range into 30 Nov), bear 23% (thin post-holiday liquidity, risk-off spills from crypto into equities). No trade request.",
+    "time": "2026-11-27T16:04:00+01:00"
    },
    "name": "Marcus Lindqvist",
    "role": "Macro",
@@ -1058,17 +1129,26 @@
      "ic_title": "Apex Horizon Capital — Investment Committee #4 (AM session)",
      "text": "Risk at stops is €44.59 (4.43%). The allowance is €50.34, which leaves €5.75 of headroom, so no new trade fits. Open risk is rising only because prices are moving away from the stops. That's unbanked profit, not a breach. Every position has a stop, drawdown is zero, and the kill switch is 15% away. If total risk crosses 5% from further gains before 30 Nov, I'll require a rule-based response at that IC: a trim of the drifted position or a trail on the validated ATR rule. I agree with Kenji's re-peg proposal for BTC as long as fill size stays capped so that entry risk is ≤ €20. Approve HOLD.",
      "time": "2026-11-27T09:03:00+01:00"
+    },
+    {
+     "bullets": [
+      "Risk at stops €46.04 (4.57%); allowance €50.41, headroom €4.37 — no new trade fits. Every position has a stop, drawdown zero, kill switch 15% away. Headroom is shrinking only from gains; as minuted, if total risk crosses 5% I will require a rule-based trim or validated ATR trail at that IC. Approve HOLD."
+     ],
+     "ic": "2026-11-27-pm",
+     "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
+     "text": "Risk at stops €46.04 (4.57%); allowance €50.41, headroom €4.37 — no new trade fits. Every position has a stop, drawdown zero, kill switch 15% away. Headroom is shrinking only from gains; as minuted, if total risk crosses 5% I will require a rule-based trim or validated ATR trail at that IC. Approve HOLD.",
+     "time": "2026-11-27T16:04:00+01:00"
     }
    ],
    "key": "sofia",
    "latest": {
     "bullets": [
-     "Risk at stops is €44.59 (4.43%). The allowance is €50.34, which leaves €5.75 of headroom, so no new trade fits. Open risk is rising only because prices are moving away from the stops. That's unbanked profit, not a breach. Every position has a stop, drawdown is zero, and the kill switch is 15% away. If total risk crosses 5% from further gains before 30 Nov, I'll require a rule-based response at that IC: a trim of the drifted position or a trail on the validated ATR rule. I agree with Kenji's re-peg proposal for BTC as long as fill size stays capped so that entry risk is ≤ €20. Approve HOLD."
+     "Risk at stops €46.04 (4.57%); allowance €50.41, headroom €4.37 — no new trade fits. Every position has a stop, drawdown zero, kill switch 15% away. Headroom is shrinking only from gains; as minuted, if total risk crosses 5% I will require a rule-based trim or validated ATR trail at that IC. Approve HOLD."
     ],
-    "ic": "2026-11-27-am",
-    "ic_title": "Apex Horizon Capital — Investment Committee #4 (AM session)",
-    "text": "Risk at stops is €44.59 (4.43%). The allowance is €50.34, which leaves €5.75 of headroom, so no new trade fits. Open risk is rising only because prices are moving away from the stops. That's unbanked profit, not a breach. Every position has a stop, drawdown is zero, and the kill switch is 15% away. If total risk crosses 5% from further gains before 30 Nov, I'll require a rule-based response at that IC: a trim of the drifted position or a trail on the validated ATR rule. I agree with Kenji's re-peg proposal for BTC as long as fill size stays capped so that entry risk is ≤ €20. Approve HOLD.",
-    "time": "2026-11-27T09:03:00+01:00"
+    "ic": "2026-11-27-pm",
+    "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
+    "text": "Risk at stops €46.04 (4.57%); allowance €50.41, headroom €4.37 — no new trade fits. Every position has a stop, drawdown zero, kill switch 15% away. Headroom is shrinking only from gains; as minuted, if total risk crosses 5% I will require a rule-based trim or validated ATR trail at that IC. Approve HOLD.",
+    "time": "2026-11-27T16:04:00+01:00"
    },
    "name": "Sofia Brandt",
    "role": "CRO",
@@ -1137,17 +1217,26 @@
      "ic_title": "Apex Horizon Capital — Investment Committee #4 (AM session)",
      "text": "Xetra has just opened, so SXR8 is still marked at yesterday's close. That's a real print, but it's 15.5h old. APC.F is a Tradegate pre-market quote with a wide spread. Any trim would cost €1 plus 15–30 bp. Cash stays parked. No orders, and the US half-day is a poor time to execute anyway.",
      "time": "2026-11-27T09:03:00+01:00"
+    },
+    {
+     "bullets": [
+      "All prints fresh this session. Any action costs €1 + 15–30 bp; US half-day close is poor liquidity. No orders."
+     ],
+     "ic": "2026-11-27-pm",
+     "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
+     "text": "All prints fresh this session. Any action costs €1 + 15–30 bp; US half-day close is poor liquidity. No orders.",
+     "time": "2026-11-27T16:04:00+01:00"
     }
    ],
    "key": "tomas",
    "latest": {
     "bullets": [
-     "Xetra has just opened, so SXR8 is still marked at yesterday's close. That's a real print, but it's 15.5h old. APC.F is a Tradegate pre-market quote with a wide spread. Any trim would cost €1 plus 15–30 bp. Cash stays parked. No orders, and the US half-day is a poor time to execute anyway."
+     "All prints fresh this session. Any action costs €1 + 15–30 bp; US half-day close is poor liquidity. No orders."
     ],
-    "ic": "2026-11-27-am",
-    "ic_title": "Apex Horizon Capital — Investment Committee #4 (AM session)",
-    "text": "Xetra has just opened, so SXR8 is still marked at yesterday's close. That's a real print, but it's 15.5h old. APC.F is a Tradegate pre-market quote with a wide spread. Any trim would cost €1 plus 15–30 bp. Cash stays parked. No orders, and the US half-day is a poor time to execute anyway.",
-    "time": "2026-11-27T09:03:00+01:00"
+    "ic": "2026-11-27-pm",
+    "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
+    "text": "All prints fresh this session. Any action costs €1 + 15–30 bp; US half-day close is poor liquidity. No orders.",
+    "time": "2026-11-27T16:04:00+01:00"
    },
    "name": "Tomas Rask",
    "role": "Execution",
