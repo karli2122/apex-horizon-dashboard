@@ -410,6 +410,50 @@
      "text": "All prints fresh this session. Any action costs €1 + 15–30 bp; US half-day close is poor liquidity. No orders."
     }
    }
+  },
+  {
+   "chairman": null,
+   "decision": "HOLD. No trades, no stop changes. BTC breakout order stays armed at 65,447. Monday AM: review the 5% risk headroom (€2.37) and the SXR8/AAPL cap drift ahead of the 30 Nov rotation.",
+   "decision_table": null,
+   "file": "ic/2026-11-28-wknd.md",
+   "id": "2026-11-28-wknd",
+   "kind": "ic",
+   "markdown": "# Apex Horizon Capital — Investment Committee #6 (Weekend session)\n**Date:** Sat 28 Nov 2026, 12:21 CET (Oslo) · **Mode:** PAPER · **Session:** wknd (crypto and FX only)\n**Present:** CEO; CIO Elena Varga; Quant Dr. Kenji Mori; Macro Marcus Lindqvist; Execution Tomas Rask; CRO Sofia Brandt (speaks last)\n**Board rulings in force:** USD exposure exempt from the CIO 25% theme cap; per-position 25% cap, 2% per-trade risk, 5% total stop risk and 15% kill-switch still apply (26 Nov 08:20). 'Hybrid Super Scalping' video research-only (08:38). Hull Suite / AlphaTrend / Pivot Point SuperTrend not adopted, research backtest only (10:07).\n\n## 1. Mark (mark.py, 11:20:45 UTC = 12:20 CET)\n| Symbol | Last | Price time (CET) | UPL € | To stop | To target | Open risk € |\n|---|---|---|---|---|---|---|\n| SXR8.DE long 0.3593 | €717.94 | Fri 27 Nov 17:29 (Xetra close) | +8.95 | 10.15% | 5.20% | ~23.8 |\n| APC.F long 0.7692 | €327.20 | Fri 27 Nov 18:40 (Frankfurt) | +2.68 | 7.47% | 12.62% | ~18.5 |\n| EURUSD short €250 | 1.0939 | Fri 27 Nov 23:29 (FX weekend close) | +0.70 | 1.95% | 3.15% | ~4.9 |\n\n- Cash €499.99 · **Equity €1,010.33** · Total P&L **+€10.33 (+1.03%)** · Day P&L +€2.12 · Gross €759.64 (75.2%) · Risk at stops €48.15 (4.77%, limit 5%) · Drawdown 0.00% (new equity high).\n- Equity legs carry Friday closing prints (markets shut); EURUSD is the Friday late close.\n- **No stops or targets hit.**\n- **BTC conditional buy:** last closed 4h bar 59,832.00 USDT vs trigger 65,447 → **not triggered** (8.6% below). BTCUSDT 59,219.89 (Binance, 12:20 CET). Rolling 55-bar 4h Donchian high 64,603.12 / low 55,130.00; ADX 17.1 (−DI 29.0 > +DI 18.0), RSI(4h) 39.5, ATR(4h) 1,055. BTC-EUR (Coinbase) €54,141.30 at 12:20 CET. Stays armed.\n- Other crypto (12:20 CET): ETHUSDT 1,646.43 (ADX 17.7, RSI 39.1) · SOLUSDT 70.74 (ADX 12.4).\n\n## 2. Department views (crypto/FX only)\n**CIO — Elena Varga:** Weekend book is unchanged. EURUSD at ~24.7% notional, on the per-position cap. No crypto exposure; the only crypto entry we have validated is the breakout, and it is nowhere near. Cash stays cash.\n\n**Quant — Dr. Kenji Mori:** BTC, ETH and SOL are all in low-ADX, −DI-dominant ranges. That is exactly the regime where our trend_breakout signal is idle and mean-reversion — which failed out of sample — would be tempting. I veto any dip-buy. The trigger stays at 65,447 (the rolling Donchian high has eased to 64,603; we do not re-peg the order on the weekend without a validated rule).\n\n**Macro — Marcus Lindqvist:** Crypto flat-to-soft after Friday's sell-off; weekend liquidity is thin and moves tend to fade or gap Monday. FX is shut until Sunday evening; EURUSD closed Friday at 1.0939, USD-strength regime intact. Bull 25% (BTC reclaims 62k into month-end), base 50% (57–61k range through the weekend), bear 25% (break below the 55,130 Donchian low on thin books). No trade request.\n\n**Execution — Tomas Rask:** FX CFD market closed until Sunday ~23:00 CET; no fills possible there. Crypto weekend spreads wider than weekday; any order would cost 25 bp+ on Coinbase. Nothing to execute.\n\n**CRO — Sofia Brandt (last):** Risk at stops €48.15 = 4.77%; allowance €50.52, headroom €2.37. No new trade fits under the 5% line. The rise is from the SXR8 gain widening its distance to stop, not new risk. My standing condition: if total risk crosses 5% at a session, I require a rule-based trim or a validated ATR trail at that IC — flagged for Monday AM, where equity markets are open and it can be acted on. Every position stopped, drawdown zero, kill-switch at €858.78. **Approve HOLD.**\n\n## 3. Decision\n**HOLD.** No trades, no stop changes. BTC breakout order stays armed at 65,447. Monday AM: review the 5% risk headroom (€2.37) and the SXR8/AAPL cap drift ahead of the 30 Nov rotation.\n\n## 4. Ops\n- Box was refreshed: .venv rebuilt (yfinance, requests, pandas, numpy) before the mark.\n- Ledger updated by mark.py at 12:20 CET. Dashboard Page refreshed.\n- Dashboard publish 12:21 CET: **OK** — pushed to karli2122/apex-horizon-dashboard; https://karli2122.github.io/apex-horizon-dashboard/ live and current. Prior failure streak ended.\n",
+   "seq": 8,
+   "time": "2026-11-28T12:21:00+01:00",
+   "title": "Apex Horizon Capital — Investment Committee #6 (Weekend session)",
+   "views": {
+    "elena": {
+     "bullets": [
+      "Weekend book is unchanged. EURUSD at ~24.7% notional, on the per-position cap. No crypto exposure; the only crypto entry we have validated is the breakout, and it is nowhere near. Cash stays cash."
+     ],
+     "text": "Weekend book is unchanged. EURUSD at ~24.7% notional, on the per-position cap. No crypto exposure; the only crypto entry we have validated is the breakout, and it is nowhere near. Cash stays cash."
+    },
+    "kenji": {
+     "bullets": [
+      "BTC, ETH and SOL are all in low-ADX, −DI-dominant ranges. That is exactly the regime where our trend_breakout signal is idle and mean-reversion — which failed out of sample — would be tempting. I veto any dip-buy. The trigger stays at 65,447 (the rolling Donchian high has eased to 64,603; we do not re-peg the order on the weekend without a validated rule)."
+     ],
+     "text": "BTC, ETH and SOL are all in low-ADX, −DI-dominant ranges. That is exactly the regime where our trend_breakout signal is idle and mean-reversion — which failed out of sample — would be tempting. I veto any dip-buy. The trigger stays at 65,447 (the rolling Donchian high has eased to 64,603; we do not re-peg the order on the weekend without a validated rule)."
+    },
+    "marcus": {
+     "bullets": [
+      "Crypto flat-to-soft after Friday's sell-off; weekend liquidity is thin and moves tend to fade or gap Monday. FX is shut until Sunday evening; EURUSD closed Friday at 1.0939, USD-strength regime intact. Bull 25% (BTC reclaims 62k into month-end), base 50% (57–61k range through the weekend), bear 25% (break below the 55,130 Donchian low on thin books). No trade request."
+     ],
+     "text": "Crypto flat-to-soft after Friday's sell-off; weekend liquidity is thin and moves tend to fade or gap Monday. FX is shut until Sunday evening; EURUSD closed Friday at 1.0939, USD-strength regime intact. Bull 25% (BTC reclaims 62k into month-end), base 50% (57–61k range through the weekend), bear 25% (break below the 55,130 Donchian low on thin books). No trade request."
+    },
+    "sofia": {
+     "bullets": [
+      "Risk at stops €48.15 = 4.77%; allowance €50.52, headroom €2.37. No new trade fits under the 5% line. The rise is from the SXR8 gain widening its distance to stop, not new risk. My standing condition: if total risk crosses 5% at a session, I require a rule-based trim or a validated ATR trail at that IC — flagged for Monday AM, where equity markets are open and it can be acted on. Every position stopped, drawdown zero, kill-switch at €858.78. Approve HOLD."
+     ],
+     "text": "Risk at stops €48.15 = 4.77%; allowance €50.52, headroom €2.37. No new trade fits under the 5% line. The rise is from the SXR8 gain widening its distance to stop, not new risk. My standing condition: if total risk crosses 5% at a session, I require a rule-based trim or a validated ATR trail at that IC — flagged for Monday AM, where equity markets are open and it can be acted on. Every position stopped, drawdown zero, kill-switch at €858.78. Approve HOLD."
+    },
+    "tomas": {
+     "bullets": [
+      "FX CFD market closed until Sunday ~23:00 CET; no fills possible there. Crypto weekend spreads wider than weekday; any order would cost 25 bp+ on Coinbase. Nothing to execute."
+     ],
+     "text": "FX CFD market closed until Sunday ~23:00 CET; no fills possible there. Crypto weekend spreads wider than weekday; any order would cost 25 bp+ on Coinbase. Nothing to execute."
+    }
+   }
   }
  ],
  "meta": {
@@ -870,17 +914,26 @@
      "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
      "text": "Both equity legs edged up and the USD leg turned positive. SXR8 sits at 25.4%, AAPL 25.0%, EURUSD 24.8% notional: all on the per-position cap. No new validated idea; cash stays cash. SXR8 drift remains for the 30 Nov rotation.",
      "time": "2026-11-27T16:04:00+01:00"
+    },
+    {
+     "bullets": [
+      "Weekend book is unchanged. EURUSD at ~24.7% notional, on the per-position cap. No crypto exposure; the only crypto entry we have validated is the breakout, and it is nowhere near. Cash stays cash."
+     ],
+     "ic": "2026-11-28-wknd",
+     "ic_title": "Apex Horizon Capital — Investment Committee #6 (Weekend session)",
+     "text": "Weekend book is unchanged. EURUSD at ~24.7% notional, on the per-position cap. No crypto exposure; the only crypto entry we have validated is the breakout, and it is nowhere near. Cash stays cash.",
+     "time": "2026-11-28T12:21:00+01:00"
     }
    ],
    "key": "elena",
    "latest": {
     "bullets": [
-     "Both equity legs edged up and the USD leg turned positive. SXR8 sits at 25.4%, AAPL 25.0%, EURUSD 24.8% notional: all on the per-position cap. No new validated idea; cash stays cash. SXR8 drift remains for the 30 Nov rotation."
+     "Weekend book is unchanged. EURUSD at ~24.7% notional, on the per-position cap. No crypto exposure; the only crypto entry we have validated is the breakout, and it is nowhere near. Cash stays cash."
     ],
-    "ic": "2026-11-27-pm",
-    "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
-    "text": "Both equity legs edged up and the USD leg turned positive. SXR8 sits at 25.4%, AAPL 25.0%, EURUSD 24.8% notional: all on the per-position cap. No new validated idea; cash stays cash. SXR8 drift remains for the 30 Nov rotation.",
-    "time": "2026-11-27T16:04:00+01:00"
+    "ic": "2026-11-28-wknd",
+    "ic_title": "Apex Horizon Capital — Investment Committee #6 (Weekend session)",
+    "text": "Weekend book is unchanged. EURUSD at ~24.7% notional, on the per-position cap. No crypto exposure; the only crypto entry we have validated is the breakout, and it is nowhere near. Cash stays cash.",
+    "time": "2026-11-28T12:21:00+01:00"
    },
    "name": "Elena Varga",
    "role": "CIO",
@@ -956,17 +1009,26 @@
      "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
      "text": "No signal changed. BTC moved away from the breakout, not toward it; spot is ~10% below the trigger, so the re-peg (within 2%) is moot. ADX regime still range. I'd object to buying this crypto dip — it's mean-reversion, not validated out of sample.",
      "time": "2026-11-27T16:04:00+01:00"
+    },
+    {
+     "bullets": [
+      "BTC, ETH and SOL are all in low-ADX, −DI-dominant ranges. That is exactly the regime where our trend_breakout signal is idle and mean-reversion — which failed out of sample — would be tempting. I veto any dip-buy. The trigger stays at 65,447 (the rolling Donchian high has eased to 64,603; we do not re-peg the order on the weekend without a validated rule)."
+     ],
+     "ic": "2026-11-28-wknd",
+     "ic_title": "Apex Horizon Capital — Investment Committee #6 (Weekend session)",
+     "text": "BTC, ETH and SOL are all in low-ADX, −DI-dominant ranges. That is exactly the regime where our trend_breakout signal is idle and mean-reversion — which failed out of sample — would be tempting. I veto any dip-buy. The trigger stays at 65,447 (the rolling Donchian high has eased to 64,603; we do not re-peg the order on the weekend without a validated rule).",
+     "time": "2026-11-28T12:21:00+01:00"
     }
    ],
    "key": "kenji",
    "latest": {
     "bullets": [
-     "No signal changed. BTC moved away from the breakout, not toward it; spot is ~10% below the trigger, so the re-peg (within 2%) is moot. ADX regime still range. I'd object to buying this crypto dip — it's mean-reversion, not validated out of sample."
+     "BTC, ETH and SOL are all in low-ADX, −DI-dominant ranges. That is exactly the regime where our trend_breakout signal is idle and mean-reversion — which failed out of sample — would be tempting. I veto any dip-buy. The trigger stays at 65,447 (the rolling Donchian high has eased to 64,603; we do not re-peg the order on the weekend without a validated rule)."
     ],
-    "ic": "2026-11-27-pm",
-    "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
-    "text": "No signal changed. BTC moved away from the breakout, not toward it; spot is ~10% below the trigger, so the re-peg (within 2%) is moot. ADX regime still range. I'd object to buying this crypto dip — it's mean-reversion, not validated out of sample.",
-    "time": "2026-11-27T16:04:00+01:00"
+    "ic": "2026-11-28-wknd",
+    "ic_title": "Apex Horizon Capital — Investment Committee #6 (Weekend session)",
+    "text": "BTC, ETH and SOL are all in low-ADX, −DI-dominant ranges. That is exactly the regime where our trend_breakout signal is idle and mean-reversion — which failed out of sample — would be tempting. I veto any dip-buy. The trigger stays at 65,447 (the rolling Donchian high has eased to 64,603; we do not re-peg the order on the weekend without a validated rule).",
+    "time": "2026-11-28T12:21:00+01:00"
    },
    "name": "Dr. Kenji Mori",
    "role": "Quant",
@@ -1043,17 +1105,26 @@
      "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
      "text": "Crypto sold off hard intraday (BTC −4%, ETH −5%), NOK weakened (EURNOK 10.72), EURUSD drifted lower to 1.0949: USD-strength regime intact. VIX ~27 remains elevated. Bull 30% (month-end flows lift US equities), base 47% (range into 30 Nov), bear 23% (thin post-holiday liquidity, risk-off spills from crypto into equities). No trade request.",
      "time": "2026-11-27T16:04:00+01:00"
+    },
+    {
+     "bullets": [
+      "Crypto flat-to-soft after Friday's sell-off; weekend liquidity is thin and moves tend to fade or gap Monday. FX is shut until Sunday evening; EURUSD closed Friday at 1.0939, USD-strength regime intact. Bull 25% (BTC reclaims 62k into month-end), base 50% (57–61k range through the weekend), bear 25% (break below the 55,130 Donchian low on thin books). No trade request."
+     ],
+     "ic": "2026-11-28-wknd",
+     "ic_title": "Apex Horizon Capital — Investment Committee #6 (Weekend session)",
+     "text": "Crypto flat-to-soft after Friday's sell-off; weekend liquidity is thin and moves tend to fade or gap Monday. FX is shut until Sunday evening; EURUSD closed Friday at 1.0939, USD-strength regime intact. Bull 25% (BTC reclaims 62k into month-end), base 50% (57–61k range through the weekend), bear 25% (break below the 55,130 Donchian low on thin books). No trade request.",
+     "time": "2026-11-28T12:21:00+01:00"
     }
    ],
    "key": "marcus",
    "latest": {
     "bullets": [
-     "Crypto sold off hard intraday (BTC −4%, ETH −5%), NOK weakened (EURNOK 10.72), EURUSD drifted lower to 1.0949: USD-strength regime intact. VIX ~27 remains elevated. Bull 30% (month-end flows lift US equities), base 47% (range into 30 Nov), bear 23% (thin post-holiday liquidity, risk-off spills from crypto into equities). No trade request."
+     "Crypto flat-to-soft after Friday's sell-off; weekend liquidity is thin and moves tend to fade or gap Monday. FX is shut until Sunday evening; EURUSD closed Friday at 1.0939, USD-strength regime intact. Bull 25% (BTC reclaims 62k into month-end), base 50% (57–61k range through the weekend), bear 25% (break below the 55,130 Donchian low on thin books). No trade request."
     ],
-    "ic": "2026-11-27-pm",
-    "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
-    "text": "Crypto sold off hard intraday (BTC −4%, ETH −5%), NOK weakened (EURNOK 10.72), EURUSD drifted lower to 1.0949: USD-strength regime intact. VIX ~27 remains elevated. Bull 30% (month-end flows lift US equities), base 47% (range into 30 Nov), bear 23% (thin post-holiday liquidity, risk-off spills from crypto into equities). No trade request.",
-    "time": "2026-11-27T16:04:00+01:00"
+    "ic": "2026-11-28-wknd",
+    "ic_title": "Apex Horizon Capital — Investment Committee #6 (Weekend session)",
+    "text": "Crypto flat-to-soft after Friday's sell-off; weekend liquidity is thin and moves tend to fade or gap Monday. FX is shut until Sunday evening; EURUSD closed Friday at 1.0939, USD-strength regime intact. Bull 25% (BTC reclaims 62k into month-end), base 50% (57–61k range through the weekend), bear 25% (break below the 55,130 Donchian low on thin books). No trade request.",
+    "time": "2026-11-28T12:21:00+01:00"
    },
    "name": "Marcus Lindqvist",
    "role": "Macro",
@@ -1138,17 +1209,26 @@
      "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
      "text": "Risk at stops €46.04 (4.57%); allowance €50.41, headroom €4.37 — no new trade fits. Every position has a stop, drawdown zero, kill switch 15% away. Headroom is shrinking only from gains; as minuted, if total risk crosses 5% I will require a rule-based trim or validated ATR trail at that IC. Approve HOLD.",
      "time": "2026-11-27T16:04:00+01:00"
+    },
+    {
+     "bullets": [
+      "Risk at stops €48.15 = 4.77%; allowance €50.52, headroom €2.37. No new trade fits under the 5% line. The rise is from the SXR8 gain widening its distance to stop, not new risk. My standing condition: if total risk crosses 5% at a session, I require a rule-based trim or a validated ATR trail at that IC — flagged for Monday AM, where equity markets are open and it can be acted on. Every position stopped, drawdown zero, kill-switch at €858.78. Approve HOLD."
+     ],
+     "ic": "2026-11-28-wknd",
+     "ic_title": "Apex Horizon Capital — Investment Committee #6 (Weekend session)",
+     "text": "Risk at stops €48.15 = 4.77%; allowance €50.52, headroom €2.37. No new trade fits under the 5% line. The rise is from the SXR8 gain widening its distance to stop, not new risk. My standing condition: if total risk crosses 5% at a session, I require a rule-based trim or a validated ATR trail at that IC — flagged for Monday AM, where equity markets are open and it can be acted on. Every position stopped, drawdown zero, kill-switch at €858.78. Approve HOLD.",
+     "time": "2026-11-28T12:21:00+01:00"
     }
    ],
    "key": "sofia",
    "latest": {
     "bullets": [
-     "Risk at stops €46.04 (4.57%); allowance €50.41, headroom €4.37 — no new trade fits. Every position has a stop, drawdown zero, kill switch 15% away. Headroom is shrinking only from gains; as minuted, if total risk crosses 5% I will require a rule-based trim or validated ATR trail at that IC. Approve HOLD."
+     "Risk at stops €48.15 = 4.77%; allowance €50.52, headroom €2.37. No new trade fits under the 5% line. The rise is from the SXR8 gain widening its distance to stop, not new risk. My standing condition: if total risk crosses 5% at a session, I require a rule-based trim or a validated ATR trail at that IC — flagged for Monday AM, where equity markets are open and it can be acted on. Every position stopped, drawdown zero, kill-switch at €858.78. Approve HOLD."
     ],
-    "ic": "2026-11-27-pm",
-    "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
-    "text": "Risk at stops €46.04 (4.57%); allowance €50.41, headroom €4.37 — no new trade fits. Every position has a stop, drawdown zero, kill switch 15% away. Headroom is shrinking only from gains; as minuted, if total risk crosses 5% I will require a rule-based trim or validated ATR trail at that IC. Approve HOLD.",
-    "time": "2026-11-27T16:04:00+01:00"
+    "ic": "2026-11-28-wknd",
+    "ic_title": "Apex Horizon Capital — Investment Committee #6 (Weekend session)",
+    "text": "Risk at stops €48.15 = 4.77%; allowance €50.52, headroom €2.37. No new trade fits under the 5% line. The rise is from the SXR8 gain widening its distance to stop, not new risk. My standing condition: if total risk crosses 5% at a session, I require a rule-based trim or a validated ATR trail at that IC — flagged for Monday AM, where equity markets are open and it can be acted on. Every position stopped, drawdown zero, kill-switch at €858.78. Approve HOLD.",
+    "time": "2026-11-28T12:21:00+01:00"
    },
    "name": "Sofia Brandt",
    "role": "CRO",
@@ -1226,17 +1306,26 @@
      "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
      "text": "All prints fresh this session. Any action costs €1 + 15–30 bp; US half-day close is poor liquidity. No orders.",
      "time": "2026-11-27T16:04:00+01:00"
+    },
+    {
+     "bullets": [
+      "FX CFD market closed until Sunday ~23:00 CET; no fills possible there. Crypto weekend spreads wider than weekday; any order would cost 25 bp+ on Coinbase. Nothing to execute."
+     ],
+     "ic": "2026-11-28-wknd",
+     "ic_title": "Apex Horizon Capital — Investment Committee #6 (Weekend session)",
+     "text": "FX CFD market closed until Sunday ~23:00 CET; no fills possible there. Crypto weekend spreads wider than weekday; any order would cost 25 bp+ on Coinbase. Nothing to execute.",
+     "time": "2026-11-28T12:21:00+01:00"
     }
    ],
    "key": "tomas",
    "latest": {
     "bullets": [
-     "All prints fresh this session. Any action costs €1 + 15–30 bp; US half-day close is poor liquidity. No orders."
+     "FX CFD market closed until Sunday ~23:00 CET; no fills possible there. Crypto weekend spreads wider than weekday; any order would cost 25 bp+ on Coinbase. Nothing to execute."
     ],
-    "ic": "2026-11-27-pm",
-    "ic_title": "Apex Horizon Capital — Investment Committee #5 (PM session)",
-    "text": "All prints fresh this session. Any action costs €1 + 15–30 bp; US half-day close is poor liquidity. No orders.",
-    "time": "2026-11-27T16:04:00+01:00"
+    "ic": "2026-11-28-wknd",
+    "ic_title": "Apex Horizon Capital — Investment Committee #6 (Weekend session)",
+    "text": "FX CFD market closed until Sunday ~23:00 CET; no fills possible there. Crypto weekend spreads wider than weekday; any order would cost 25 bp+ on Coinbase. Nothing to execute.",
+    "time": "2026-11-28T12:21:00+01:00"
    },
    "name": "Tomas Rask",
    "role": "Execution",
